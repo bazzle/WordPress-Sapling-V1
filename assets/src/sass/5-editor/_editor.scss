@@ -1,0 +1,17 @@
+.wp-block-post-content{
+    @include text-format;
+    p, li{
+        font-family: $font-sans-serif;
+        font-size: $font-size-standard;
+        font-weight: 400;
+        a{
+            color: $color-accent;
+            text-decoration: underline;
+            @include text-sans-serif-bold;
+        }
+    }
+}
+.wp-block-post-title{
+    margin-bottom: 3rem;
+    margin-top: 1em!important;
+}

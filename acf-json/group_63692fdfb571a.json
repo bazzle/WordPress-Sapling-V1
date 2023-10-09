@@ -1,0 +1,67 @@
+{
+    "key": "group_63692fdfb571a",
+    "title": "TLDR",
+    "fields": [
+        {
+            "key": "field_63692feba0974",
+            "label": "Content",
+            "name": "tldr_content",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "A succint summary of this term. Single paragraph Highly prominent on the page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6418f200622e9",
+            "label": "Block height",
+            "name": "block_height",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "https:\/\/www.epochconverter.com\/\r\nhttps:\/\/blockchain.info\/blocks\/1672571160000?format=json",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1679358612
+}

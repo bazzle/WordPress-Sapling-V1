@@ -1,0 +1,214 @@
+// imports
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500&family=Cormorant+Garamond:ital,wght@0,700;1,700&family=IBM+Plex+Sans:wght@300;600&display=swap');
+
+// Typography variables
+
+$font-serif: 'Cormorant', serif;
+$font-serif-italic: 'Cormorant', serif;
+$font-sans-serif: 'IBM Plex Sans', sans-serif;
+$font-sans-serif-bold: 'IBM Plex Sans', sans-serif;
+$font-sans-serif-italic: 'IBM Plex Sans', sans-serif;
+$font-serif-bold: 'Alegreya SC', serif;
+$font-blocky: 'Alegreya SC', serif;
+$font-exp: 'Cormorant Garamond';
+$font-size-standard: 1.4rem;
+
+// Typography mixins
+
+@mixin text-body{
+    font-family: $font-sans-serif;
+    font-size: $font-size-standard;
+    font-weight: 300;
+}
+@mixin text-meta{
+    color: $white;
+    font-family: $font-blocky;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+@mixin text-serif-bold{
+    font-family: $font-serif-bold;
+    font-weight: 600;
+}
+@mixin text-sans-serif-bold{
+    font-family: $font-sans-serif-bold;
+    font-weight: 600;
+}
+@mixin text-bold-italic{
+    font-family: $font-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+@mixin text-site-name{
+    font-family: $font-blocky;
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+@mixin text-button{
+    font-family: $font-blocky;
+    font-weight: 600;
+    font-size: 3rem;
+}
+@mixin text-blockquote{
+    font-family: $font-serif-italic;
+    font-style: italic;
+    font-size: 3rem;
+}
+@mixin text-footer{
+    font-family: $font-blocky;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+@mixin text-heading{
+    font-family: $font-exp;
+    font-size: clamp(4.5rem, 5vw, 8rem);
+    line-height: 1;
+}
+@mixin text-heading-single{
+    font-family: $font-exp;
+    font-size: clamp(5rem, 6vw, 8rem);
+    line-height: 1;
+}
+@mixin text-intro{
+    font-family: $font-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: $font-exp;
+    font-size: 3.5rem;
+}
+@mixin text-body-heading{
+    font-family: $font-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: $font-exp;
+    font-size: 3.5rem;
+}
+@mixin paragraphdefaults{
+    color: inherit;
+    line-height: 1.8;
+    @include text-body;
+    @include gap(margin-bottom);
+}
+
+
+@mixin ullistdefaults{
+    padding: 0;
+    @include text-body;
+    list-style-position: inside;
+    @include gap(margin-bottom);
+    li{
+        position: relative;
+        display: block;
+        padding-left: 1.2em;
+        list-style: none;
+        line-height: 1.4;
+        &:before {
+            position: absolute;
+            top: 0.5em;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            background-color: $color-accent;
+            content: '';
+        }
+    }
+}
+  
+@mixin ollistdefaults{
+    padding: 0;
+    @include text-body;
+    list-style: none;
+    counter-reset: li;
+    list-style-position: inside;
+    @include gap(margin-bottom);
+    li{
+        counter-increment: item;
+        position: relative;
+        display: block;
+        padding-left: 1.5em;
+        list-style: none;
+        line-height: 1.4;
+        &:before {
+        position: absolute;
+        left: 0;
+        color: $color-accent;
+        content: counter(item) '. ';
+        }
+    }
+}
+  
+  
+  // body text formatting
+  
+@mixin text-format {
+    a{
+        color: $color-accent;
+        text-decoration: underline;
+    }
+    h2, h3, h4, h5, p, a, ol, hr, blockquote{
+        @include gap(margin-bottom, 1);
+    }
+    h2{
+        @include text-body-heading;
+        @include gap(margin-top);
+        @include gap(margin-bottom, 2);
+        display: inline-block;
+        font-size: 3rem;
+    }
+    h3{
+        @include text-body-heading;
+        @include gap(margin-top);
+        @include gap(margin-bottom, 2);
+        display: inline-block;
+        font-size: 3rem;
+    }
+    p, a, li{
+        @include text-body;
+    }
+    b, strong{
+        @include text-sans-serif-bold;
+    }
+    a:active {
+        border-bottom: 1px solid $color-text-link;
+    }
+    a:focus {
+        border-bottom: 1px solid $color-text-link;
+    }
+    a:visited {
+        border-bottom: 1px solid $color-text-link;
+    }
+    p{
+        @include paragraphdefaults;
+    }
+    ul{
+        @include ullistdefaults;
+    }
+    ol{
+        @include ollistdefaults;
+    }
+    hr {
+        height: 4px solid $color-accent;
+        border: none;
+    }
+    blockquote{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        @include gap(padding-top);
+        @include gap(padding-bottom);
+        p{
+            @include text-blockquote;
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1.4;
+            text-align: left;
+            color: black;
+        }
+        cite{
+            text-align: left;
+        }
+        p:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}

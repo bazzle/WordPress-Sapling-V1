@@ -1,0 +1,7 @@
+.o-footer{
+    @include gap(margin-top,2);
+    @include gap(margin-bottom,4);
+    p{
+        @include text-footer;
+    }
+}

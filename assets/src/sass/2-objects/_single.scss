@@ -1,0 +1,63 @@
+.o-single{
+  &__title{
+    @include text-heading-single;
+    color: $color-accent;
+    @include gap(margin-top, 2);
+    @include gap(margin-bottom, 1);
+  }
+  &__metadata{
+    display:flex;
+    gap: .5em;
+    flex-direction: column;
+    @include text-meta;
+    @include break(mobile){
+      flex-direction: row;
+      align-items: unset;
+      flex-wrap: wrap;
+    }
+    &__divider{
+      display: none;
+      @include break(mobile){
+          display: block;
+      }
+    }
+  }
+  &__content{
+    @include text-format;
+  }
+  &__cta{
+    gap: 3rem;
+    display: flex;
+    align-items: center;
+    &__button{
+      flex-shrink: 0;
+    }
+    &:after{
+      display: block;
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: $color-accent;
+    }
+  }
+  &__tldr{
+    @include gap(padding-bottom, 1);
+    p{
+      @include text-intro;
+      margin-bottom: 0;
+    }
+  }
+  &__featured-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    @include break(tablet){
+      aspect-ratio: 10/2;
+    }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: $color-accent;
+    background-blend-mode: multiply;
+    position: relative;
+  }
+}
