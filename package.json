@@ -6,17 +6,21 @@
     "sass": "sass assets/src/sass/main.scss:assets/dist/style.css",
     "watch": "concurrently \"sass --watch assets/src/sass/main.scss:assets/dist/style.css\" \"npm run stylelint-watch\" \"npm run serve\"",
     "stylelint": "stylelint 'assets/src/sass/**/*.scss'",
-    "stylelint-watch": "onchange 'assets/src/sass/**/*.scss' -- npm run stylelint",
+    "stylelint-watch": "onchange 'assets/src/sass/**/*.scss' -- stylelint {{changed}}",
     "serve": "browser-sync start --proxy wpstarter.local --files 'assets/dist/*.css'"
   },
   "devDependencies": {
     "browser-sync": "^2.26.16",
-    "stylelint": "^14.0.1",
-    "stylelint-config-standard": "^24.0.0",
     "concurrently": "^7.0.0",
-    "onchange": "^7.1.0"
+    "onchange": "^7.1.0",
+    "stylelint": "^14.0.1",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard": "^24.0.0"
   },
   "stylelint": {
-    "extends": "stylelint-config-standard"
+    "extends": "stylelint-config-sass-guidelines",
+    "ignoreFiles": [
+      "assets/src/sass/0-lib/*.scss"
+    ]
   }
 }
