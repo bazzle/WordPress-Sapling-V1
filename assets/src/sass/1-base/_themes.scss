@@ -1,0 +1,42 @@
+// Custom colors
+// ------------------------------------------------------------
+$color-brand: #21C4B2;
+
+// accents
+// ------------------------------------------------------------
+$color-accent: #21C4B2;
+$color-accent--light: lighten($color-accent, 10%);
+
+// Background colors
+// ------------------------------------------------------------
+$color-bg-1:#ffffff;
+$color-bg-2:#f9f9f9;
+// Dark
+$color-bg-1--dark:#000000;
+$color-bg-2--dark:#151515;
+
+// Text colors
+// ------------------------------------------------------------
+$color-text:#333333;
+$color-text-link:$color-accent;
+// Dark
+$color-text--dark: #ffffff;
+$color-text-link--dark:$color-accent;
+
+// line color
+// ------------------------------------------------------------
+$color-line:#F2F2F2;
+$color-line-solid:#707070;
+// Dark
+$color-line--dark:#d8d8d8;
+$color-line-solid--dark:#707070;
+
+// standard border
+// ------------------------------------------------------------
+$borderline: 1px solid $color-line;
+$borderline-solid: 1px solid $color-line-solid;
+$borderline-thick: 2px solid $color-line-solid;
+// Dark
+$borderline--dark: 2px solid $color-line--dark;
+$borderline-solid--dark: 1px solid $color-line-solid--dark;
+$borderline-thick--dark: 2px solid $color-line-solid--dark;

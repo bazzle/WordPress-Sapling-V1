@@ -1,6 +1,7 @@
 .e-button{
-  @include text-button;
-  font-size: 1.4rem;
+  font-family: $font-blocky;
+  font-weight: 600;
+  font-size: 3rem;
   position: relative;
   display: inline-block;
   width: auto;

@@ -14,12 +14,12 @@ $white: #fff;
 $black: #000;
 
 // color options
-$teal: #21C4B2;
-$color-bitcoin: #f7931a;
+$color-brand: #21C4B2;
+$color-brand: #f7931a;
 
 // colors
-$color-accent: $color-bitcoin;
-$color-accent-light: lighten($color-accent, 10%);
+$color-accent: $color-brand;
+$color-accent--light: lighten($color-accent, 10%);
 
 // Background colors
 $color-bg-1:#161616;
@@ -42,8 +42,8 @@ $color-line-off-black:#333333;
 
 // standard border
 $borderline: 2px solid $color-line;
-$borderline-darker: 2px solid $color-line-dark;
-$borderline-solid: 2px solid $color-line-solid;
+$borderline-solid: 2px solid $color-line-dark;
+$borderline-thick: 2px solid $color-line-solid;
 
 // fancy transitions
 $move-whip: cubic-bezier(0.8, 0, 0.3, 1);

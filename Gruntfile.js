@@ -58,7 +58,7 @@ module.exports = function (grunt) {
             src : 'assets/dist/style.css'
         },
         options: {
-            proxy: "bitcoin.local",
+            proxy: "wpstarter.local",
             watchTask: true
         }
       }

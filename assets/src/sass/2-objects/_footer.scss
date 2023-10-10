@@ -2,6 +2,8 @@
     @include gap(margin-top,2);
     @include gap(margin-bottom,4);
     p{
-        @include text-footer;
+        font-family: $font-blocky;
+        font-size: 1.6rem;
+        font-weight: 400;
     }
 }

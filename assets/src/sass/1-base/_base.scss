@@ -1,4 +1,4 @@
-html {
+html{
   width: 100%;
   height: 100%;
   margin: 0;
@@ -16,49 +16,44 @@ html {
   }
 }
 
-body {
+body{
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  background-color: $color-bg-1;
-  color:$color-text;
   font-family: $font-serif;
   font-size: $font-size-standard;
   text-align: left;
   overflow-x: hidden;
-  ::selection{
-    background-color: $color-accent-light;
-    color: $black;
+  background-color: $color-bg-1;
+  color:$color-text;
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-bg-1--dark;
+    color:$color-text--dark;
   }
 }
 
-* {
+*{
   &,
   &::before,
-  &::after {
+  &::after{
     box-sizing: inherit;
   }
-
   font-synthesis: inherit;
 }
 
-address {
+address{
   font-size: inherit;
   font-style: inherit;
 }
 
-figure {
+figure{
   margin: 0;
 }
 
-.touch {
+.touch{
   cursor: pointer;
-}
-
-::selection {
-  color: $white;
 }
 
 h1{
@@ -76,29 +71,53 @@ input:not([type='range']),
 label,
 select,
 summary,
-textarea {
+textarea{
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 
 a{
   outline: none;
-  color: inherit;
   text-decoration: none;
   transition: all 100ms ease-out;
-  &:active{
-    outline: 2px solid $color-accent;
-  }
-  &:focus{
-    outline: 2px solid $color-accent;
-  }
+  color:$color-text-link;
+    &:active{
+        outline: 2px solid $color-accent;
+        @media (prefers-color-scheme: dark) {
+          outline: 2px solid $color-accent--light;
+        }
+    }
+    &:focus{
+        outline: 2px solid $color-accent;
+        @media (prefers-color-scheme: dark) {
+          outline: 2px solid $color-accent--light;
+        }
+    }
+    &:active{
+        border-bottom: 1px solid $color-text-link;
+        @media (prefers-color-scheme: dark) {
+          border-color: $color-text-link--dark;
+        }
+    }
+    &:focus{
+        border-bottom: 1px solid $color-text-link;
+        @media (prefers-color-scheme: dark) {
+          border-color: $color-text-link--dark;
+        }
+    }
+    &:visited{
+        border-bottom: 1px solid $color-text-link;
+        @media (prefers-color-scheme: dark) {
+          border-color: $color-text-link--dark;
+        }
+    }
 }
 
 button{
   transition: all 100ms ease-out;
 }
 
-.sr {
+.sr{
   display: none;
 }
 
@@ -108,4 +127,98 @@ ul li{
 
 svg, svg path{
   fill:currentcolor;
+}
+  
+h2, h3, h4, h5, p, a, ol, hr, blockquote{
+    @include gap(margin-bottom, 1);
+}
+p, li{
+    @include text-body;
+    a{
+        text-decoration: underline;
+        @include text-sans-serif-bold;
+    }
+}
+b, strong{
+    @include text-sans-serif-bold;
+}
+
+p{
+    @include paragraphdefaults;
+}
+ul{
+    @include ullistdefaults;
+}
+ol{
+    @include ollistdefaults;
+}
+hr{
+    height: 1px;
+    border: none;
+    background-color: $color-line-solid;
+    @media (prefers-color-scheme: dark) {
+      background-color: $color-line-solid--dark;
+    }
+}
+::selection{
+  background-color: $color-accent;
+  color: $black;
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-accent--light;
+  }
+}
+blockquote{
+    $left: calc(29px + 1.2rem);
+    @include gap(margin-top, 2);
+    @include gap(margin-bottom, 2);
+    padding-left: calc(29px + 1.2rem);
+    position: relative;
+    @include break(site-width-margins-plus){
+        left: calc(0px - 29px - 1.2rem);
+    }
+    &:before{
+        position: absolute;
+        left: 0;
+        top: -1.2rem;
+        content:'';
+        width:29px;
+        height:28px;
+        display: block;
+        background-image: url(#{$image-path}/quotemark.svg);
+        background-size: cover;
+    }
+    p{
+        position: relative;
+        font-weight: 700;
+        line-height: 1.4;
+        display: block;
+        font-style: normal;
+        margin-bottom: .5em;
+        font-family: $font-serif-italic;
+        font-style: italic;
+        font-size: 3rem;
+        &:first-of-type{
+            @include gap(padding-top);
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    cite{
+        @include text-serif-bold-italic;
+        font-size: 2.6rem;
+        display: block;
+        padding-top: .6em;
+        line-height: 1;
+    }
+    &.blockquote--long{
+        p{
+            line-height: 1.8;
+            @include text-sans-serif-bold;
+            font-size: 2.2rem;
+        }
+        cite{
+            font-size: 2.4rem;
+        }
+    }
 }
