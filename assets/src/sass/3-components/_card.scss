@@ -9,10 +9,10 @@
   gap:$gap;
   position: relative;
   &:last-of-type{
-    border-bottom: none;
+    border-bottom: 0;
   }
   &__title {
-    font-family: $font-exp;
+    @include font-sans;
     font-size: 3rem;
     @include break(site-width-wide-margins){
         font-size: 3.5rem;
@@ -79,7 +79,7 @@
       flex-shrink: 0;
     }
 
-    &:after {
+    &::after {
       display: block;
       content: '';
       width: 100%;

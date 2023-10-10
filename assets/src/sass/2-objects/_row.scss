@@ -1,57 +1,41 @@
-$edgepadding:3rem;
-$edgepadding-mobile:1rem;
-$edgepadding-mobile-loose:3rem;
+$edgepadding: 3rem;
+$edgepadding-mobile: 1rem;
+$edgepadding-mobile--loose: 3rem;
 
 @mixin padding-loose{
-  padding-right: $edgepadding-mobile-loose;
-  padding-left: $edgepadding-mobile-loose;
+  padding-left: $edgepadding-mobile--loose;
+  padding-right: $edgepadding-mobile--loose;
   @include break(site-width){
-    padding-right: $edgepadding;
     padding-left: $edgepadding;
-  }
-}
-@mixin padding-tight{
-  padding-right: $edgepadding-mobile;
-  padding-left: $edgepadding-mobile;
-  @include break(site-width){
     padding-right: $edgepadding;
-    padding-left: $edgepadding;
   }
 }
 
-.o-row {
+@mixin padding-tight{
+  padding-left: $edgepadding-mobile;
+  padding-right: $edgepadding-mobile;
+  @include break(site-width){
+    padding-left: $edgepadding;
+    padding-right: $edgepadding;
+  }
+}
+
+.o-row{
   width: 100%;
   @include gap(margin-top);
   @include gap(margin-bottom);
   @include padding-loose;
-  &--nomargin {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  &--nomargin-top {
-    margin-top: 0;
-  }
-  &--nomargin-bottom {
-    margin-bottom: 0;
-  }
-  &--no-padding {
-    padding: 0;
-  }
-
-  &--no-padding__left {
-    padding-left: 0;
-  }
-
-  &--no-padding__right {
-    padding-right: 0;
-  }
 }
 
-.o-grid-container {
-  max-width: $site-width-narrow;
-  margin-right: auto;
-  margin-left: auto;
+.o-row-container{
+  @mixin defaults{
+    max-width: $site-width-narrow;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include defaults;
   &--wide{
+    @include defaults;
     max-width: $site-width-wide;
   }
 }

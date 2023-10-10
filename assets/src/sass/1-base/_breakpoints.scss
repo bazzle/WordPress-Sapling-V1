@@ -1,4 +1,6 @@
 // Breakpoints
+// ------------------------------------------------------------
+
 $breakpoints: (
     mobile: 22.438em, // 359px
     mobile-land: 32em, // 512px
@@ -19,7 +21,9 @@ $breakpoints--h: (
     letterbox: 900px
 );
 
-// breakpoint mixins
+// Breakpoint mixins
+// ------------------------------------------------------------
+
 @mixin break($breakpoint: medium) {
   @if map-has-key($breakpoints, $breakpoint) {
       @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
@@ -27,7 +31,6 @@ $breakpoints--h: (
       }
   }
 }
-
 @mixin break-under($breakpoint: medium) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
@@ -35,7 +38,6 @@ $breakpoints--h: (
     }
   }
 }
-
 @mixin break-between($breakpoint-lower, $breakpoint-higher){
   @media screen and (min-width: map-get($breakpoints, $breakpoint-lower)) and (max-width: map-get($breakpoints, $breakpoint-higher)) {
     @content;

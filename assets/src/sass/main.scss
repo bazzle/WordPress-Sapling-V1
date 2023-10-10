@@ -1,13 +1,15 @@
+@use "sass:color";
+
 @import '0-lib/reset';
-@import '1-base/variables';
+@import '1-base/variables-mixins';
 @import '1-base/breakpoints';
-@import '1-base/mixins';
 @import '1-base/themes';
 @import '1-base/typography';
 @import '1-base/base';
+@import '1-base/wordpress';
 @import '1-base/utilities';
-
 @import '2-objects/header';
+
 @import '2-objects/main';
 @import '2-objects/index';
 @import '2-objects/footer';
@@ -15,6 +17,7 @@
 @import '2-objects/single';
 
 @import '3-components/logo';
+
 @import '3-components/card';
 
-@import '4-elements/button';
+// @import '4-elements/button';

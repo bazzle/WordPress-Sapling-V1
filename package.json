@@ -4,15 +4,19 @@
   "description": "A lightweight starter theme with minimal styling",
   "scripts": {
     "sass": "sass assets/src/sass/main.scss:assets/dist/style.css",
-    "watch": "concurrently \"sass --watch assets/src/sass/main.scss:assets/dist/style.css\" \"npm run stylelint-watch\" \"npm run serve\"",
+    "postcss": "postcss assets/dist/style.css --use autoprefixer -o assets/dist/style.css",
+    "build": "npm run sass && npm run postcss",
+    "watch": "concurrently \"sass --watch assets/src/sass/main.scss:assets/dist/style.css\" \"npm run stylelint-watch\" \"npm run serve\" \"npm run postcss\"",
     "stylelint": "stylelint 'assets/src/sass/**/*.scss'",
-    "stylelint-watch": "onchange 'assets/src/sass/**/*.scss' -- stylelint {{changed}}",
+    "stylelint-watch": "onchange 'assets/src/sass/**/*.scss' -- stylelint",
     "serve": "browser-sync start --proxy wpstarter.local --files 'assets/dist/*.css'"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "browser-sync": "^2.26.16",
     "concurrently": "^7.0.0",
     "onchange": "^7.1.0",
+    "postcss": "^8.4.31",
     "stylelint": "^14.0.1",
     "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-config-standard": "^24.0.0"
@@ -21,6 +25,10 @@
     "extends": "stylelint-config-sass-guidelines",
     "ignoreFiles": [
       "assets/src/sass/0-lib/*.scss"
-    ]
+    ],
+    "rules": {
+      "rule-empty-line-before": null,
+      "max-nesting-depth": 3
+    }
   }
 }

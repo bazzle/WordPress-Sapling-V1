@@ -1,87 +1,112 @@
 // imports
 // ------------------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500&family=Cormorant+Garamond:ital,wght@0,700;1,700&family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap');
 
-// Typography variables
+// Font mixins
 // ------------------------------------------------------------
 
-$font-serif: 'Cormorant', serif;
-$font-serif-italic: 'Cormorant', serif;
-$font-sans-serif: 'IBM Plex Sans', sans-serif;
-$font-sans-serif-bold: 'IBM Plex Sans', sans-serif;
-$font-sans-serif-italic: 'IBM Plex Sans', sans-serif;
-$font-serif-bold: 'Alegreya SC', serif;
-$font-blocky: 'Alegreya SC', serif;
-$font-numbers: 'IBM Plex Sans', sans-serif;
-$font-exp: 'Cormorant Garamond';
-$font-size-standard: 1.6rem;
-
-// Text mixins
-// ------------------------------------------------------------
-
-@mixin text-serif-bold{
-    font-family: $font-serif-bold;
-    font-weight: 600;
+@mixin font-serif{
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
 }
-@mixin text-sans-serif-bold{
-    font-family: $font-sans-serif-bold;
-    font-weight: 600;
-}
-@mixin text-serif-bold-italic{
-    font-family: $font-serif;
+@mixin font-serif-italic{
+    font-family: 'Cormorant', serif;
+    font-weight: 500;
     font-style: italic;
+}
+@mixin font-serif-bold{
+    font-family: 'Cormorant', serif;
     font-weight: 700;
 }
+@mixin font-serif-bold-italic{
+    font-family: 'Cormorant', serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin font-sans{
+    font-family: 'IBM Plex Sans', serif;
+    font-weight: 400;
+}
+@mixin font-sans-italic{
+    font-family: 'IBM Plex Sans', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+@mixin font-sans-bold{
+    font-family: 'IBM Plex Sans', serif;
+    font-weight: 600;
+}
+
+// Text variables
+// ------------------------------------------------------------
+
+$font-size-base:10px;
+$font-size-standard:1.6rem;
 
 // Text mixins for specific uses
 // ------------------------------------------------------------
 
 // For article body.
 // Slightly bigger for easy comfortable reading
-@mixin text-body{
-    font-family: $font-sans-serif;
+@mixin text-body {
+    @include font-sans;
     font-size: $font-size-standard;
 }
 
 // For body text that sits within constrained blocks such as cards.
 // Smaller than body text
-@mixin text-block{
-    font-family: $font-sans-serif;
+@mixin text-block {
+    @include font-sans;
     font-size: $font-size-standard;
     line-height: 2.8rem;
 }
 
 // For things like metadata, captions taglines and section heads
 // typically small font-size, uppercase and generous letter-spacing
-@mixin text-blocky{
-    font-family: $font-numbers;
-    font-size:14px;
-    @include break(tablet){
-        font-size: 1.4rem;
-    }
+@mixin text-blocky {
+    font-family: 'IBM Plex Sans', serif;
+    font-size: 1.4rem;
+}
+
+// Default top-level heading
+@mixin text-heading--upper {
+    @include font-sans-bold;
+    font-size: clamp(4rem, 4vw, 6rem);
+    line-height: 1;
+}
+@mixin text-heading {
+    @include font-sans-bold;
+    font-size: clamp(4rem, 4vw, 6rem);
+    line-height: 1;
+}
+@mixin text-heading--lower {
+    @include font-sans-bold;
+    font-size: clamp(4rem, 4vw, 6rem);
+    line-height: 1;
 }
 
 // For top level page headings
 // Typically single article h1 headings, or hierarchical pages, like pillar pages
-@mixin text-heading-single{
-    font-family: $font-exp;
+@mixin text-heading-single {
+    @include font-sans-bold;
     font-size: clamp(3rem, 6vw, 6rem);
     line-height: 1;
 }
 
 // For article headings within body
 // Typically single article h2's or pillar page section headings
-@mixin text-heading-body{
-    font-family: $font-exp;
+@mixin text-heading-body {
+    @include font-sans-bold;
     font-size: clamp(4rem, 4vw, 6rem);
     line-height: 1;
 }
 
 // For article headings within body - lower level
 // We don't make any visual differentiation between h3's and h4's
-@mixin text-heading-body--lower{
-    font-family: $font-exp;
+@mixin text-heading-body--lower {
+    @include font-sans-bold;
     font-size: clamp(4rem, 4vw, 6rem);
     line-height: 1;
 }
@@ -89,24 +114,25 @@ $font-size-standard: 1.6rem;
 // Some defaults
 // ------------------------------------------------------------
 
-@mixin paragraphdefaults{
+@mixin paragraphdefaults {
     color: inherit;
     line-height: 1.8;
     @include text-body;
     @include gap(margin-bottom);
 }
-@mixin ullistdefaults{
+
+@mixin ullistdefaults {
     padding: 0;
     @include text-body;
     list-style-position: inside;
     @include gap(margin-bottom);
-    li{
+    li {
         position: relative;
         display: block;
         padding-left: 1.2em;
         list-style: none;
         line-height: 1.4;
-        &:before {
+        &::before {
             position: absolute;
             top: 0.5em;
             left: 0;
@@ -117,21 +143,21 @@ $font-size-standard: 1.6rem;
         }
     }
 }
-@mixin ollistdefaults{
+@mixin ollistdefaults {
     padding: 0;
     @include text-body;
     list-style: none;
     counter-reset: li;
     list-style-position: inside;
     @include gap(margin-bottom);
-    li{
+    li {
         counter-increment: item;
         position: relative;
         display: block;
         padding-left: 1.5em;
         list-style: none;
         line-height: 1.4;
-        &:before {
+        &::before {
         position: absolute;
         left: 0;
         content: counter(item) '. ';

@@ -7,7 +7,7 @@ if ( have_posts() ) :  ?>
         <div class="o-single">
             <div class="o-single__hero">
                 <div class="o-row">
-                    <div class="o-grid-container">
+                    <div class="o-row-container">
                         <h1 class="o-single__title"><?php the_title() ?></h1>
                         <div class="o-single__metadata">
                             <time class="o-single__metadata__item"><?php echo get_the_time( 'F jS, Y' ); ?></time>
@@ -30,7 +30,7 @@ if ( have_posts() ) :  ?>
             </div>
 
             <div class="o-row">
-                <div class="o-grid-container">
+                <div class="o-row-container">
                     <div class="o-single__content">
                         <?php if($tldr) : ?>
                             <div class="o-single__tldr">

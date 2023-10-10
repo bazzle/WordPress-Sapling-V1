@@ -1,8 +1,8 @@
 <footer class="o-footer">
-    <div class="o-row nomargin">
-        <div class="o-grid-container o-header__container">
+    <div class="o-row nomargin--y">
+        <div class="o-row-container o-footer__container">
             <p>
-                &copy; Barry Richards / <a target="_blank" href="https://twitter.com/bazzle">@bazzle</a> &nbsp;–&nbsp; <?php echo get_bloginfo( 'name' ); ?>&nbsp;<span class="getyear"></span>
+                &copy; Barry Richards / <?php echo get_bloginfo( 'name' ); ?>&nbsp;<span class="getyear"></span>
             </p>
         </div>
     </div>

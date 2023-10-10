@@ -2,8 +2,8 @@
 $tagline = get_bloginfo('description');
 ?>
 <header class="o-header-frontpage">
-    <div class="o-row nomargin">
-        <div class="o-grid-container o-grid-container--wide o-header-frontpage__container">
+    <div class="o-row nomargin--y">
+        <div class="o-row-container o-header-frontpage__container">
             <div class="o-header-frontpage__site-name-tag">
                 <a class="o-header-frontpage__site-name" href="<?php echo get_option('home'); ?>">
                     <?php echo get_bloginfo( 'name' ); ?>

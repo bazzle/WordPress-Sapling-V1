@@ -1,47 +1,70 @@
-.dark{
-  background-color: #333333;
-  color:$white;
-  p, li, a{
-    color:$white;
-  }
-}
+// Padding utilities
+// ------------------------------------------------------------
 
-// Padding
-
-$padding-std: clamp(3rem, 3vw, 4rem);
-$padding-deep: clamp(3rem, 5vw, 6rem);
-.padding{
+.padding {
   padding-top:$padding-deep;
   padding-bottom: $padding-deep;
-  .c-product-details &{
-    padding-top:$padding-deep;
-    padding-bottom: $padding-deep;
-  }
 }
-.nopaddingtop{
+.padding--shallow {
+  padding-top:$padding-std;
+  padding-bottom: $padding-std;
+}
+.nopadding--top {
   padding-top:0!important;
 }
-.nopaddingbottom{
+.nopadding--bottom {
   padding-bottom: 0!important;
 }
-.nopaddingtopbottom{
+.nopadding--left {
+  padding-left:0!important;
+}
+.nopadding--right {
+  padding-right: 0!important;
+}
+.nopadding--x {
+  padding-left:0!important;
+  padding-right: 0!important;
+}
+.nopadding--y {
   padding-top:0!important;
   padding-bottom: 0!important;
 }
 
-.nomargintop{
+// Margin utilities
+// ------------------------------------------------------------
+
+.margin {
+  margin-top:$padding-deep;
+  margin-bottom: $padding-deep;
+}
+.margin--shallow {
+  margin-top:$padding-std;
+  margin-bottom: $padding-std;
+}
+.nomargin--top {
   margin-top:0!important;
 }
-.nomarginbottom{
+.nomargin--bottom {
   margin-bottom: 0!important;
 }
-.nomargin{
+.nomargin--left {
+  margin-left:0!important;
+}
+.nomargin--right {
+  margin-right: 0!important;
+}
+.nomargin--x {
+  margin-left:0!important;
+  margin-right: 0!important;
+}
+.nomargin--y {
   margin-top:0!important;
   margin-bottom: 0!important;
 }
 
 
-// backgrounds
+// Backgrounds
+// ------------------------------------------------------------
 
 .background--white{
   background-color:$white;

@@ -1,7 +1,919 @@
-﻿/*!
-* ress.css • v1.2.2
-* MIT License
-* github.com/filipelinhares/ress
-*/@import"https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500&family=Cormorant+Garamond:ital,wght@0,700;1,700&family=IBM+Plex+Sans:wght@300;400;600&display=swap";html{box-sizing:border-box;overflow-y:scroll;-webkit-text-size-adjust:100%}*,::before,::after{background-repeat:no-repeat;box-sizing:inherit}::before,::after{vertical-align:inherit;text-decoration:inherit}*{margin:0;padding:0}audio:not([controls]){display:none;height:0}hr{overflow:visible}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}summary{display:list-item}[hidden],template{display:none}abbr[title]{border-bottom:1px dotted;text-decoration:none}a{background-color:rgba(0,0,0,0);-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace,monospace}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}sub,sup{position:relative;vertical-align:baseline;font-size:75%;line-height:0}sub{bottom:-0.25em}sup{top:-0.5em}input{border-radius:0}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}[disabled]{cursor:default}[type=number]{width:auto}[type=search]{-webkit-appearance:textfield}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:bold}button{overflow:visible}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{padding:0;border-style:0}button:-moz-focusring,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{outline:1px dotted ButtonText}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button,select{text-transform:none}button,input,select,textarea{background-color:rgba(0,0,0,0);border-style:none;color:inherit}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{display:table;max-width:100%;border:0;color:inherit;white-space:normal}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}[type=search]{outline-offset:-2px;-webkit-appearance:textfield}img{display:inline-block;vertical-align:top;border-style:none}progress{vertical-align:baseline}svg:not(:root){overflow:hidden}audio,canvas,progress,video{display:inline-block}img,embed,object,audio,video{max-width:100%;height:auto}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){position:absolute !important;clip:rect(0 0 0 0) !important}}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled]{cursor:default}::-moz-selection{background-color:#b3d4fc;color:#000;text-shadow:none}::selection{background-color:#b3d4fc;color:#000;text-shadow:none}@media screen and (max-width: 900px){#wpadminbar{display:none}}html{width:100%;height:100%;margin:0;padding:0;box-sizing:border-box;font-size:10px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-synthesis:none;text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);overflow-y:unset}@media screen and (max-width: 40.063em){html{overflow-x:hidden}}body{display:flex;flex-direction:column;width:100%;min-height:100vh;margin:0;font-family:"Cormorant",serif;font-size:1.6rem;text-align:left;overflow-x:hidden;background-color:#fff;color:#333}@media(prefers-color-scheme: dark){body{background-color:#000;color:#fff}}*{font-synthesis:inherit}*,*::before,*::after{box-sizing:inherit}address{font-size:inherit;font-style:inherit}figure{margin:0}.touch{cursor:pointer}h1{font-size:2.6rem}h2,h3,h4,h5{font-size:2.2rem}a,area,button,[role=button],input:not([type=range]),label,select,summary,textarea{-ms-touch-action:manipulation;touch-action:manipulation}a{outline:none;text-decoration:none;transition:all 100ms ease-out;color:#21c4b2}a:active{outline:2px solid #21c4b2}@media(prefers-color-scheme: dark){a:active{outline:2px solid #3adecc}}a:focus{outline:2px solid #21c4b2}@media(prefers-color-scheme: dark){a:focus{outline:2px solid #3adecc}}a:active{border-bottom:1px solid #21c4b2}@media(prefers-color-scheme: dark){a:active{border-color:#21c4b2}}a:focus{border-bottom:1px solid #21c4b2}@media(prefers-color-scheme: dark){a:focus{border-color:#21c4b2}}a:visited{border-bottom:1px solid #21c4b2}@media(prefers-color-scheme: dark){a:visited{border-color:#21c4b2}}button{transition:all 100ms ease-out}.sr{display:none}ul li{list-style:none}svg,svg path{fill:currentcolor}h2,h3,h4,h5,p,a,ol,hr,blockquote{margin-bottom:calc(1.5rem * 1)}@media screen and (min-width: 40.063em){h2,h3,h4,h5,p,a,ol,hr,blockquote{margin-bottom:calc(2.5rem * 1)}}p,li{font-family:"IBM Plex Sans",sans-serif;font-size:1.6rem}p a,li a{text-decoration:underline;font-family:"IBM Plex Sans",sans-serif;font-weight:600}b,strong{font-family:"IBM Plex Sans",sans-serif;font-weight:600}p{color:inherit;line-height:1.8;font-family:"IBM Plex Sans",sans-serif;font-size:1.6rem;margin-bottom:calc(1.5rem * 1)}@media screen and (min-width: 40.063em){p{margin-bottom:calc(2.5rem * 1)}}ul{padding:0;font-family:"IBM Plex Sans",sans-serif;font-size:1.6rem;list-style-position:inside;margin-bottom:calc(1.5rem * 1)}@media screen and (min-width: 40.063em){ul{margin-bottom:calc(2.5rem * 1)}}ul li{position:relative;display:block;padding-left:1.2em;list-style:none;line-height:1.4}ul li:before{position:absolute;top:.5em;left:0;width:6px;height:6px;background-color:#21c4b2;content:""}ol{padding:0;font-family:"IBM Plex Sans",sans-serif;font-size:1.6rem;list-style:none;counter-reset:li;list-style-position:inside;margin-bottom:calc(1.5rem * 1)}@media screen and (min-width: 40.063em){ol{margin-bottom:calc(2.5rem * 1)}}ol li{counter-increment:item;position:relative;display:block;padding-left:1.5em;list-style:none;line-height:1.4}ol li:before{position:absolute;left:0;content:counter(item) ". "}hr{height:1px;border:none;background-color:#707070}@media(prefers-color-scheme: dark){hr{background-color:#707070}}::selection{background-color:#21c4b2;color:#000}@media(prefers-color-scheme: dark){::selection{background-color:#3adecc}}blockquote{margin-top:calc(1.5rem * 2);margin-bottom:calc(1.5rem * 2);padding-left:calc(29px + 1.2rem);position:relative}@media screen and (min-width: 40.063em){blockquote{margin-top:calc(2.5rem * 2)}}@media screen and (min-width: 40.063em){blockquote{margin-bottom:calc(2.5rem * 2)}}@media screen and (min-width: calc(900px + 3rem + 60px)){blockquote{left:calc(-29px - 1.2rem)}}blockquote:before{position:absolute;left:0;top:-1.2rem;content:"";width:29px;height:28px;display:block;background-image:url(/wp-content/themes/bitcoin/assets/src/img/quotemark.svg);background-size:cover}blockquote p{position:relative;font-weight:700;line-height:1.4;display:block;font-style:normal;margin-bottom:.5em;font-family:"Cormorant",serif;font-style:italic;font-size:3rem}blockquote p:first-of-type{padding-top:calc(1.5rem * 1)}@media screen and (min-width: 40.063em){blockquote p:first-of-type{padding-top:calc(2.5rem * 1)}}blockquote p:last-of-type{margin-bottom:0}blockquote cite{font-family:"Cormorant",serif;font-style:italic;font-weight:700;font-size:2.6rem;display:block;padding-top:.6em;line-height:1}blockquote.blockquote--long p{line-height:1.8;font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:2.2rem}blockquote.blockquote--long cite{font-size:2.4rem}.dark{background-color:#333;color:#fff}.dark p,.dark li,.dark a{color:#fff}.padding{padding-top:clamp(3rem,5vw,6rem);padding-bottom:clamp(3rem,5vw,6rem)}.c-product-details .padding{padding-top:clamp(3rem,5vw,6rem);padding-bottom:clamp(3rem,5vw,6rem)}.nopaddingtop{padding-top:0 !important}.nopaddingbottom{padding-bottom:0 !important}.nopaddingtopbottom{padding-top:0 !important;padding-bottom:0 !important}.nomargintop{margin-top:0 !important}.nomarginbottom{margin-bottom:0 !important}.nomargin{margin-top:0 !important;margin-bottom:0 !important}.background--white{background-color:#fff}.visually-hidden,.visually-hidden-focusable:not(:focus):not(:focus-within){position:absolute !important;width:1px !important;height:1px !important;padding:0 !important;margin:-1px !important;overflow:hidden !important;clip:rect(0, 0, 0, 0) !important;white-space:nowrap !important;border:0 !important}.o-header{padding-top:calc(1.5rem * 2)}@media screen and (min-width: 40.063em){.o-header{padding-top:calc(2.5rem * 2)}}.o-header__container{display:flex;align-items:center;justify-content:center;width:100%;position:relative}.o-header__title{width:100%}.o-header__site-name{color:#fff;margin-right:2rem;display:block}.o-header__link{display:block;white-space:nowrap;width:100%;height:100%;position:absolute;left:0;top:0;z-index:1}.o-header__logo{display:flex;align-items:center;flex-grow:1}.o-header__logo__logo{display:block;color:#21c4b2}.o-header__site-tagline{width:100%;display:flex;gap:1em;align-items:center;white-space:nowrap}.o-header__site-tagline:after{height:1px;background-color:#21c4b2;content:"";width:100%}.o-index__container{display:grid;gap:20px;grid-template-columns:1fr;grid-auto-rows:auto}@media screen and (min-width: 40.063em){.o-index__container{grid-template-columns:1fr 1fr}}@media screen and (min-width: 55em){.o-index__container{grid-template-columns:1fr 1fr 1fr}}.o-footer{margin-top:calc(1.5rem * 2);margin-bottom:calc(1.5rem * 4)}@media screen and (min-width: 40.063em){.o-footer{margin-top:calc(2.5rem * 2)}}@media screen and (min-width: 40.063em){.o-footer{margin-bottom:calc(2.5rem * 4)}}.o-footer p{font-family:"Alegreya SC",serif;font-size:1.6rem;font-weight:400}.o-row{width:100%;margin-top:calc(1.5rem * 1);margin-bottom:calc(1.5rem * 1);padding-right:3rem;padding-left:3rem}@media screen and (min-width: 40.063em){.o-row{margin-top:calc(2.5rem * 1)}}@media screen and (min-width: 40.063em){.o-row{margin-bottom:calc(2.5rem * 1)}}@media screen and (min-width: 900px){.o-row{padding-right:3rem;padding-left:3rem}}.o-row--nomargin{margin-top:0;margin-bottom:0}.o-row--nomargin-top{margin-top:0}.o-row--nomargin-bottom{margin-bottom:0}.o-row--no-padding{padding:0}.o-row--no-padding__left{padding-left:0}.o-row--no-padding__right{padding-right:0}.o-grid-container{max-width:900px;margin-right:auto;margin-left:auto}.o-grid-container--wide{max-width:1100px}.o-single__title{font-family:"Cormorant Garamond";font-size:clamp(3rem,6vw,6rem);line-height:1;color:#21c4b2;margin-top:calc(1.5rem * 2);margin-bottom:calc(1.5rem * 1)}@media screen and (min-width: 40.063em){.o-single__title{margin-top:calc(2.5rem * 2)}}@media screen and (min-width: 40.063em){.o-single__title{margin-bottom:calc(2.5rem * 1)}}.o-single__metadata{display:flex;gap:.5em;flex-direction:column;font-family:"IBM Plex Sans",sans-serif;font-size:14px}@media screen and (min-width: 40.063em){.o-single__metadata{font-size:1.4rem}}@media screen and (min-width: 22.438em){.o-single__metadata{flex-direction:row;align-items:unset;flex-wrap:wrap}}.o-single__metadata__divider{display:none}@media screen and (min-width: 22.438em){.o-single__metadata__divider{display:block}}.o-single__cta{gap:3rem;display:flex;align-items:center}.o-single__cta__button{flex-shrink:0}.o-single__cta:after{display:block;content:"";width:100%;height:4px;background-color:#21c4b2}.o-single__tldr{padding-bottom:calc(1.5rem * 1)}@media screen and (min-width: 40.063em){.o-single__tldr{padding-bottom:calc(2.5rem * 1)}}.o-single__tldr p{font-family:"Cormorant",serif;font-weight:600;line-height:1.3;font-family:"Cormorant Garamond";font-size:clamp(2.4rem,3vw,3.5rem);margin-bottom:0}.o-single__featured-image{width:100%;aspect-ratio:16/9;background-repeat:no-repeat;background-position:center center;background-size:cover;background-color:#21c4b2;background-blend-mode:multiply;position:relative}@media screen and (min-width: 40.063em){.o-single__featured-image{aspect-ratio:10/2}}.c-logo{display:block;color:#fff;transition:.1s;position:relative;padding:0 2rem;display:flex;align-items:center}.c-logo svg{width:32px;height:42px}.c-logo:hover{color:#21c4b2}.c-card{padding:calc(1.5rem * 1);border-bottom:1px solid #21c4b2;background-color:#f9f9f9;border-radius:10px;height:100%;display:flex;flex-direction:column;gap:1.5rem;position:relative}@media screen and (min-width: 40.063em){.c-card{padding:calc(2.5rem * 1)}}.c-card:last-of-type{border-bottom:none}.c-card__title{font-family:"Cormorant Garamond";font-size:3rem;line-height:1;color:#21c4b2}@media screen and (min-width: calc(1100px + 3rem)){.c-card__title{font-size:3.5rem}}.c-card__title:hover{color:#21c4b2}.c-card__title__link{position:absolute;left:0;top:0;width:100%;height:100%;z-index:1}.c-card__metadata{display:flex;gap:.5em;flex-direction:column}@media screen and (min-width: 22.438em){.c-card__metadata{flex-direction:row;align-items:center}}@media screen and (min-width: 40.063em){.c-card__metadata{flex-direction:column;align-items:unset}}@media screen and (min-width: calc(1100px + 3rem)){.c-card__metadata{flex-direction:row;align-items:center}}.c-card__metadata__divider{display:none}@media screen and (min-width: 22.438em){.c-card__metadata__divider{display:block}}@media screen and (min-width: 40.063em){.c-card__metadata__divider{display:none}}@media screen and (min-width: calc(1100px + 3rem)){.c-card__metadata__divider{display:block}}.c-card__date{font-family:"IBM Plex Sans",sans-serif;font-size:14px}@media screen and (min-width: 40.063em){.c-card__date{font-size:1.4rem}}.c-card__blockheight{font-family:"IBM Plex Sans",sans-serif;font-size:14px}@media screen and (min-width: 40.063em){.c-card__blockheight{font-size:1.4rem}}.c-card__excerpt{font-family:"IBM Plex Sans",sans-serif;font-size:1.6rem;line-height:2.8rem;flex-grow:1}.c-card__cta{gap:3rem;display:flex;align-items:center}.c-card__cta__button{flex-shrink:0}.c-card__cta:after{display:block;content:"";width:100%;height:1px;background-color:#21c4b2}.e-button{font-family:"Alegreya SC",serif;font-weight:600;font-size:3rem;position:relative;display:inline-block;width:auto;padding:1em 1.2em;border:1px solid #21c4b2;color:#fff;text-align:center;text-transform:uppercase;cursor:pointer;transition-duration:.2s;transition-property:all;transition-timing-function:cubic-bezier(0.8, 0, 0.3, 1)}.e-button:hover{color:#21c4b2}.e-button:active{color:#21c4b2}.e-button:focus{color:#000;background:#21c4b2;outline:none}
+@charset "UTF-8";
+/* resset.dev • v5.0.2 */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap");
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat; /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit; /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0; /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+hr {
+  overflow: visible; /* Show the overflow in Edge and IE */
+  height: 0; /* Add the correct box sizing in Firefox */
+  color: inherit; /* Correct border color in Firefox. */
+}
+
+details,
+main {
+  display: block; /* Render the `main` element consistently in IE. */
+}
+
+summary {
+  display: list-item; /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%; /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none; /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none; /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent; /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0; /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em; /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder; /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-color: inherit; /* Correct border color in all Chrome, Edge, and Safari. */
+  text-indent: 0; /* Remove text indentation in Chrome, Edge, and Safari */
+}
+
+iframe {
+  border-style: none;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto; /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type=search] {
+  -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px; /* Correct the outline style in Safari */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto; /* Internet Explorer 11+ */
+  resize: vertical; /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit; /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold; /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible; /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none; /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button; /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-width: 0;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none; /* Firefox 36+ */
+  -webkit-appearance: none; /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none; /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor; /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0; /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit; /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table; /* Correct the text wrapping in Edge and IE */
+  max-width: 100%; /* Correct the text wrapping in Edge and IE */
+  white-space: normal; /* Correct the text wrapping in Edge and IE */
+  max-width: 100%; /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit; /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Specify the progress cursor of updating elements */
+[aria-busy=true] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled=true] {
+  cursor: default;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-y: unset;
+}
+@media screen and (max-width: 40.063em) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Cormorant", serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: left;
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #333;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+h1 {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+  font-size: clamp(4rem, 4vw, 6rem);
+  line-height: 1;
+}
+
+h2, h3 {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+  font-size: clamp(4rem, 4vw, 6rem);
+  line-height: 1;
+}
+
+h4, h5 {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+  font-size: clamp(4rem, 4vw, 6rem);
+  line-height: 1;
+}
+
+h2, h3, h4, h5, p, a, ol, hr, blockquote {
+  margin-bottom: calc(1.5rem * 1);
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  transition: all 100ms ease-out;
+  color: #21C4B2;
+}
+a:active {
+  outline: 2px solid #21C4B2;
+}
+@media (prefers-color-scheme: dark) {
+  a:active {
+    outline: 2px solid #3adecc;
+  }
+}
+a:focus {
+  outline: 2px solid #21C4B2;
+}
+@media (prefers-color-scheme: dark) {
+  a:focus {
+    outline: 2px solid #3adecc;
+  }
+}
+a:active {
+  border-bottom: 1px solid #21C4B2;
+}
+@media (prefers-color-scheme: dark) {
+  a:active {
+    border-color: #21C4B2;
+  }
+}
+a:focus {
+  border-bottom: 1px solid #21C4B2;
+}
+@media (prefers-color-scheme: dark) {
+  a:focus {
+    border-color: #21C4B2;
+  }
+}
+a:visited {
+  border-bottom: 1px solid #21C4B2;
+}
+@media (prefers-color-scheme: dark) {
+  a:visited {
+    border-color: #21C4B2;
+  }
+}
+
+blockquote {
+  margin-top: calc(1.5rem * 2);
+  margin-bottom: calc(1.5rem * 2);
+  padding-left: calc(29px + 1.2rem);
+  position: relative;
+}
+@media screen and (min-width: calc(900px + 3rem + 60px)) {
+  blockquote {
+    left: calc(-29px - 1.2rem);
+  }
+}
+blockquote::before {
+  position: absolute;
+  left: 0;
+  top: -1.2rem;
+  content: "";
+  width: 29px;
+  height: 28px;
+  display: block;
+  background-image: url(/wp-content/themes/bitcoin/assets/src/img/quotemark.svg);
+  background-size: cover;
+}
+blockquote p {
+  position: relative;
+  font-weight: 700;
+  line-height: 1.4;
+  display: block;
+  font-style: normal;
+  margin-bottom: 0.5em;
+  font-family: "Cormorant", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-style: italic;
+  font-size: 3rem;
+}
+blockquote p:first-of-type {
+  padding-top: calc(1.5rem * 1);
+}
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+blockquote cite {
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2.6rem;
+  display: block;
+  padding-top: 0.6em;
+  line-height: 1;
+}
+
+p, li {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+p a, li a {
+  text-decoration: underline;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+}
+
+b, strong {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+}
+
+p {
+  color: inherit;
+  line-height: 1.8;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: calc(1.5rem * 1);
+}
+
+ul {
+  padding: 0;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  list-style-position: inside;
+  margin-bottom: calc(1.5rem * 1);
+}
+ul li {
+  position: relative;
+  display: block;
+  padding-left: 1.2em;
+  list-style: none;
+  line-height: 1.4;
+}
+ul li::before {
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #21C4B2;
+  content: "";
+}
+
+ol {
+  padding: 0;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  list-style: none;
+  counter-reset: li;
+  list-style-position: inside;
+  margin-bottom: calc(1.5rem * 1);
+}
+ol li {
+  counter-increment: item;
+  position: relative;
+  display: block;
+  padding-left: 1.5em;
+  list-style: none;
+  line-height: 1.4;
+}
+ol li::before {
+  position: absolute;
+  left: 0;
+  content: counter(item) ". ";
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: #707070;
+}
+@media (prefers-color-scheme: dark) {
+  hr {
+    background-color: #707070;
+  }
+}
+
+ul li {
+  list-style: none;
+}
+
+::selection {
+  background-color: #21C4B2;
+  color: #000;
+}
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: #3adecc;
+  }
+}
+
+svg, svg path {
+  fill: currentcolor;
+}
+
+* {
+  font-synthesis: inherit;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+address {
+  font-size: inherit;
+  font-style: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+.touch {
+  cursor: pointer;
+}
+
+a,
+area,
+button,
+[role=button],
+input:not([type=range]),
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+/* stylelint-disable-next-line */
+@media screen and (max-width: 900px) {
+  #wpadminbar {
+    display: none;
+  }
+}
+
+.padding {
+  padding-top: clamp(3rem, 5vw, 6rem);
+  padding-bottom: clamp(3rem, 5vw, 6rem);
+}
+
+.padding--shallow {
+  padding-top: clamp(3rem, 3vw, 4rem);
+  padding-bottom: clamp(3rem, 3vw, 4rem);
+}
+
+.nopadding--top {
+  padding-top: 0 !important;
+}
+
+.nopadding--bottom {
+  padding-bottom: 0 !important;
+}
+
+.nopadding--left {
+  padding-left: 0 !important;
+}
+
+.nopadding--right {
+  padding-right: 0 !important;
+}
+
+.nopadding--x {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.nopadding--y {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.margin {
+  margin-top: clamp(3rem, 5vw, 6rem);
+  margin-bottom: clamp(3rem, 5vw, 6rem);
+}
+
+.margin--shallow {
+  margin-top: clamp(3rem, 3vw, 4rem);
+  margin-bottom: clamp(3rem, 3vw, 4rem);
+}
+
+.nomargin--top {
+  margin-top: 0 !important;
+}
+
+.nomargin--bottom {
+  margin-bottom: 0 !important;
+}
+
+.nomargin--left {
+  margin-left: 0 !important;
+}
+
+.nomargin--right {
+  margin-right: 0 !important;
+}
+
+.nomargin--x {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.nomargin--y {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.background--white {
+  background-color: #fff;
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.o-header {
+  padding-top: calc(1.5rem * 2);
+  padding-bottom: calc(1.5rem * 2);
+}
+
+.o-main {
+  padding-top: calc(1.5rem * 2);
+  padding-bottom: calc(1.5rem * 2);
+}
+
+.o-index__item {
+  padding-bottom: calc(1.5rem * 1);
+}
+.o-index__metadata {
+  font-family: "IBM Plex Sans", serif;
+  font-size: 1.4rem;
+}
+
+.o-footer {
+  padding-top: calc(1.5rem * 2);
+  padding-bottom: calc(1.5rem * 2);
+}
+
+.o-row {
+  width: 100%;
+  margin-top: calc(1.5rem * 1);
+  margin-bottom: calc(1.5rem * 1);
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+@media screen and (min-width: 900px) {
+  .o-row {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.o-row-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.o-row-container--wide {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+}
+
+.o-single__title {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1;
+  color: #21C4B2;
+  margin-top: calc(1.5rem * 2);
+  margin-bottom: calc(1.5rem * 1);
+}
+.o-single__metadata {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  font-family: "IBM Plex Sans", serif;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 22.438em) {
+  .o-single__metadata {
+    flex-direction: row;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
+}
+.o-single__metadata__divider {
+  display: none;
+}
+@media screen and (min-width: 22.438em) {
+  .o-single__metadata__divider {
+    display: block;
+  }
+}
+.o-single__cta {
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+}
+.o-single__cta__button {
+  flex-shrink: 0;
+}
+.o-single__cta::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #21C4B2;
+}
+.o-single__tldr {
+  padding-bottom: calc(1.5rem * 1);
+}
+.o-single__tldr p {
+  font-family: "Cormorant", serif;
+  font-weight: 500;
+  font-weight: 600;
+  line-height: 1.3;
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 3vw, 3.5rem);
+  margin-bottom: 0;
+}
+.o-single__featured-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #21C4B2;
+  background-blend-mode: multiply;
+  position: relative;
+}
+@media screen and (min-width: 40.063em) {
+  .o-single__featured-image {
+    aspect-ratio: 10/2;
+  }
+}
+
+.c-logo {
+  color: #fff;
+  transition: 0.1s;
+  position: relative;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+.c-logo:hover {
+  color: #21C4B2;
+}
+
+.c-card {
+  padding: calc(1.5rem * 1);
+  border-bottom: 1px solid #21C4B2;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+.c-card:last-of-type {
+  border-bottom: 0;
+}
+.c-card__title {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1;
+  color: #21C4B2;
+}
+@media screen and (min-width: calc(1100px + 3rem)) {
+  .c-card__title {
+    font-size: 3.5rem;
+  }
+}
+.c-card__title:hover {
+  color: #21C4B2;
+}
+.c-card__title__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.c-card__metadata {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+}
+@media screen and (min-width: 22.438em) {
+  .c-card__metadata {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 40.063em) {
+  .c-card__metadata {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
+@media screen and (min-width: calc(1100px + 3rem)) {
+  .c-card__metadata {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.c-card__metadata__divider {
+  display: none;
+}
+@media screen and (min-width: 22.438em) {
+  .c-card__metadata__divider {
+    display: block;
+  }
+}
+@media screen and (min-width: 40.063em) {
+  .c-card__metadata__divider {
+    display: none;
+  }
+}
+@media screen and (min-width: calc(1100px + 3rem)) {
+  .c-card__metadata__divider {
+    display: block;
+  }
+}
+.c-card__date {
+  font-family: "IBM Plex Sans", serif;
+  font-size: 1.4rem;
+}
+.c-card__blockheight {
+  font-family: "IBM Plex Sans", serif;
+  font-size: 1.4rem;
+}
+.c-card__excerpt {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  flex-grow: 1;
+}
+.c-card__cta {
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+}
+.c-card__cta__button {
+  flex-shrink: 0;
+}
+.c-card__cta::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #21C4B2;
+}
 
 /*# sourceMappingURL=style.css.map */

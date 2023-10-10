@@ -1,0 +1,81 @@
+// Paths
+// ------------------------------------------------------------
+
+$asset-path: '/wp-content/themes/bitcoin/assets/src';
+$image-path: '/wp-content/themes/bitcoin/assets/src/img';
+
+// Site widths
+// ------------------------------------------------------------
+
+$site-width-narrow: 900px;
+$site-width-wide: 1100px;
+$site-width-narrow-margins: calc(900px + 3rem);
+$site-width-wide-margins: calc(1100px + 3rem);
+
+// Paddings/Gaps
+// ------------------------------------------------------------
+
+$gap: 1.5rem;
+$grid-gap: clamp(0.5rem, 3vw, 4.5rem);
+$padding-std: clamp(3rem, 3vw, 4rem);
+$padding-deep: clamp(3rem, 5vw, 6rem);
+
+// Basic colours
+// ------------------------------------------------------------
+
+$white: #fff;
+$black: #000;
+
+// Fancy transitions
+// ------------------------------------------------------------
+
+$move-whip: cubic-bezier(0.8, 0, 0.3, 1);
+$move-snap: cubic-bezier(0.7, -0.5, 0.3, 1.5);
+$move-snap-in: cubic-bezier(0.6, -0.3, 0.7, 0);
+$move-snap-out: cubic-bezier(0.2, 0.9, 0.3, 1.3);
+$fast-to-slow: cubic-bezier(0.11, 0.71, 0.46, 0.91);
+
+// Misc
+// ------------------------------------------------------------
+
+$border-radius: 3px;
+
+// Transitions
+// ------------------------------------------------------------
+
+@mixin transition($property: all, $speed: 0.2s, $anim: $move-whip) {
+  transition-duration: $speed;
+  transition-property: $property;
+  transition-timing-function: $anim;
+}
+
+// multiple arguments
+@mixin transitions($speed, $anim, $property...) {
+  transition-duration: $speed;
+  transition-property: $property;
+  transition-timing-function: $anim;
+}
+
+// Gaps/margins/alignment
+// ------------------------------------------------------------
+
+// Gap – USAGE: @include gap(margin-top,2)
+@mixin gap($prop, $multiplier:1) {
+  #{$prop}:calc(#{$gap} * #{$multiplier});
+}
+
+// align
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Misc
+// ------------------------------------------------------------
+
+// remove default styles in iOS.
+@mixin remove-webkit-defaults {
+  border-radius: 0;
+  appearance: none;
+}

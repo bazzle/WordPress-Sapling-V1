@@ -2,13 +2,13 @@
         <div class="o-single">
             <div class="o-single__hero">
                 <div class="o-row">
-                    <div class="o-grid-container">
+                    <div class="o-row-container">
                         <h1 class="o-single__title">404</h1>
                     </div>
                 </div>
             </div>
             <div class="o-row">
-                <div class="o-grid-container">
+                <div class="o-row-container">
                     <div class="o-single__content">
                         <div class="o-single__tldr">
                             <p>

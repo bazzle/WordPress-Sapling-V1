@@ -1,15 +1,10 @@
 .c-logo{
-  display: block;
   color: $white;
   transition: 0.1s;
   position: relative;
   padding: 0 2rem;
   display: flex;
   align-items: center;
-  svg{
-    width: 32px;
-    height: 42px;
-  }
   &:hover{
     color: $color-brand;
   }

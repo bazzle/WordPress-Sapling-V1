@@ -1,5 +1,21 @@
+// Button state
+
+@mixin btn-state($textcolor, $bgcolor){
+  @include transition();
+  &:hover {
+    color: $textcolor;
+  }
+  &:active{
+    color: $textcolor;
+  }
+}
+
+button{
+  transition: all 100ms ease-out;
+}
+
 .e-button{
-  font-family: $font-blocky;
+  @include text-blocky;
   font-weight: 600;
   font-size: 3rem;
   position: relative;
@@ -7,13 +23,13 @@
   width: auto;
   padding: 1em 1.2em;
   border: 1px solid $color-accent;
-  color: white;
+  color: $white;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
   @include btn-state($color-accent, transparent);
-  &:focus {
-    color: black;
+  &:focus{
+    color: #000;
     background: $color-accent;
     outline: none;
   }

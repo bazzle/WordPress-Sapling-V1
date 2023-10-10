@@ -2,7 +2,7 @@
 if ( have_posts() ) : ?>
     <div class="o-index">
         <div class="o-row">
-            <div class="o-grid-container o-grid-container--wide">
+            <div class="o-row-container">
                 <div class="o-index o-index__container">
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div class="o-index__item">
