@@ -108,17 +108,6 @@ blockquote{
     @include break(site-width-margins-plus){
         left: calc(0px - 29px - 1.2rem);
     }
-    &::before{
-        position: absolute;
-        left: 0;
-        top: -1.2rem;
-        content:'';
-        width:29px;
-        height:28px;
-        display: block;
-        background-image: url(#{$image-path}/quotemark.svg);
-        background-size: cover;
-    }
     p{
         position: relative;
         font-weight: 700;

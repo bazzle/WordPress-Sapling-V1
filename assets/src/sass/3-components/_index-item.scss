@@ -1,0 +1,25 @@
+.c-index-item{
+  @include gap(padding-bottom,1);
+  &__metadata{
+    display:flex;
+    gap: .5em;
+    flex-direction: column;
+    @include text-blocky;
+    padding-top: $gap--shallow;
+    padding-bottom: $gap--shallow;
+    @include break(mobile){
+      flex-direction: row;
+      align-items: unset;
+      flex-wrap: wrap;
+    }
+    &__divider{
+      display: none;
+      @include break(mobile){
+          display: block;
+      }
+    }
+  }
+  &__excerpt{
+    @include text-std;
+  }
+}

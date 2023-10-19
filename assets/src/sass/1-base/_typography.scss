@@ -48,19 +48,27 @@ $font-size-standard:1.6rem;
 // Text mixins for specific uses
 // ------------------------------------------------------------
 
-// For article body.
-// Slightly bigger for easy comfortable reading
-@mixin text-body {
+// Standard, default text
+// If in doubt, use this.
+@mixin text-std {
     @include font-sans;
     font-size: $font-size-standard;
+    line-height: 2.8rem;
 }
 
 // For body text that sits within constrained blocks such as cards.
-// Smaller than body text
+// Smaller than normal text
 @mixin text-block {
     @include font-sans;
     font-size: $font-size-standard;
     line-height: 2.8rem;
+}
+
+// For article body.
+// Slightly bigger than standard for easy comfortable reading
+@mixin text-body {
+    @include font-sans;
+    font-size: $font-size-standard;
 }
 
 // For things like metadata, captions taglines and section heads

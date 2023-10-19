@@ -1,8 +1,9 @@
 .o-index{
+  &__container{
+    @include gap(padding-top,2);
+    @include gap(padding-bottom,2);
+  }
   &__item{
     @include gap(padding-bottom,1);
-  }
-  &__metadata{
-    @include text-blocky;
   }
 }

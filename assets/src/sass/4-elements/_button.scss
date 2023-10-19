@@ -1,4 +1,5 @@
 // Button state
+// ------------------------------------------------------------
 
 @mixin btn-state($textcolor, $bgcolor){
   @include transition();

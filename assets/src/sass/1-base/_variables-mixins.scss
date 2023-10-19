@@ -16,6 +16,8 @@ $site-width-wide-margins: calc(1100px + 3rem);
 // ------------------------------------------------------------
 
 $gap: 1.5rem;
+$gap--shallow: 1rem;
+$gap--deep: 3rem;
 $grid-gap: clamp(0.5rem, 3vw, 4.5rem);
 $padding-std: clamp(3rem, 3vw, 4rem);
 $padding-deep: clamp(3rem, 5vw, 6rem);

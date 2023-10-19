@@ -1,0 +1,31 @@
+.o-logo-lockup{
+  display: flex;
+  align-items: center;
+  &__logo{
+    transition: 0.1s;
+    position: relative;
+    display: block;
+    align-items: center;
+    color: $color-brand;
+    cursor:pointer;
+    @media (prefers-color-scheme: dark) {
+      color: $white;
+    }
+  }
+  &__image{
+    img{
+      max-height:100px;
+      width:auto;
+    }
+  }
+  &__link{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}

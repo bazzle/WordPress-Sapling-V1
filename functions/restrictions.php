@@ -1,39 +1,24 @@
 <?php
 
-
 /**
  * @desc Remove version info from head and feeds for added security
  */
-
 add_filter('the_generator', '__return_false');
+
 
 /**
  * @desc remove wp version param from any enqueued scripts apart from style.css which includes the cache busting filemtime
  */
-
 function vc_remove_wp_ver_css_js($src)
 {
-
     if (strpos($src, 'ver=') && !strpos($src, 'style.css') && !strpos($src, 'scripts.min.js') && !strpos($src, 'admin.min.js')) {
         $src = remove_query_arg('ver', $src);
     }
-
     return $src;
 }
 add_filter('style_loader_src', 'vc_remove_wp_ver_css_js', 100);
 add_filter('script_loader_src', 'vc_remove_wp_ver_css_js', 100);
 
-/**
- * @desc Remove Gutenberg Block Library CSS from loading on the frontend
- */
-function remove_wp_block_library_css(){
-
-  wp_dequeue_style( 'wp-block-library' );
-  wp_dequeue_style( 'wp-block-library-theme' );
-  wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
-
- }
- add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
 
 /**
  * Remove unnecessary dashboard widgets
@@ -52,18 +37,16 @@ function remove_dashboard_widgets()
     remove_meta_box('dashboard_primary', 'dashboard', 'normal'); // wordpress blog
     remove_meta_box('dashboard_secondary', 'dashboard', 'normal'); // other wordpress news
 }
-
 add_action('admin_init', 'remove_dashboard_widgets');
+
 
 /**
  * @desc Remove comments support and remove from sidebar
  */
-
 function remove_admin_menus()
 {
     remove_menu_page('edit-comments.php');
 }
-
 add_action('admin_menu', 'remove_admin_menus');
 
 function remove_comment_support()
@@ -71,21 +54,20 @@ function remove_comment_support()
     remove_post_type_support('post', 'comments');
     remove_post_type_support('page', 'comments');
 }
-
 add_action('init', 'remove_comment_support', 100);
+
 
 function my_admin_bar_render()
 {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('comments');
 }
-
 add_action('wp_before_admin_bar_render', 'my_admin_bar_render');
+
 
 /**
  * @desc Remove Emojis
  */
-
 function disable_wp_emojicons()
 {
     // all actions related to emojis
@@ -99,7 +81,6 @@ function disable_wp_emojicons()
     // filter to remove TinyMCE emojis
     add_filter('tiny_mce_plugins', 'disable_emojicons_tinymce');
 }
-
 add_action('init', 'disable_wp_emojicons');
 
 function disable_emojicons_tinymce($plugins)
@@ -110,13 +91,12 @@ function disable_emojicons_tinymce($plugins)
         return array();
     }
 }
-
 add_action('init', 'disable_emojicons_tinymce');
+
 
 /**
  * @desc Clean up WP Head
  */
-
 function head_cleanup()
 {
     remove_action('wp_head', 'feed_links_extra', 3);
@@ -151,8 +131,8 @@ function head_cleanup()
         ]);
     }
 }
-
 add_action('init', 'head_cleanup');
+
 
 /**
  * @desc  Clean up output of stylesheet <link> tags
@@ -169,8 +149,8 @@ function clean_style_tag($input)
     return '<link rel="stylesheet" href="' . $matches[2][0] . '"' . $media . '>' . "\n";
 
 }
-
 add_filter('style_loader_tag', 'clean_style_tag');
+
 
 /**
  * @desc Remove unnecessary self-closing tags
@@ -179,10 +159,10 @@ function remove_self_closing_tags($input)
 {
     return str_replace(' />', '>', $input);
 }
-
 add_filter('get_avatar', 'remove_self_closing_tags'); // <img />
 add_filter('comment_id_fields', 'remove_self_closing_tags'); // <input />
 add_filter('post_thumbnail_html', 'remove_self_closing_tags'); // <img />
+
 
 /**
  * @desc Don't return the default description in the RSS feed if it hasn't been changed
@@ -190,17 +170,17 @@ add_filter('post_thumbnail_html', 'remove_self_closing_tags'); // <img />
 function remove_default_description($bloginfo)
 {
     $default_tagline = 'Just another WordPress site';
-
     return ($bloginfo === $default_tagline) ? '' : $bloginfo;
 }
-
 add_filter('get_bloginfo_rss', 'remove_default_description');
+
 
 /**
  * @desc allow editors access to menus
  */
 $role_object = get_role('editor');
 $role_object->add_cap('edit_theme_options');
+
 
 /**
  * @desc Hide widgets
@@ -209,8 +189,8 @@ function hide_menu()
 {
     remove_submenu_page('themes.php', 'widgets.php'); // hide the widgets submenu
 }
-
 add_action('admin_head', 'hide_menu');
+
 
 /**
  * @desc Remove the additional CSS section, introduced in 4.7, from the Customizer.
@@ -221,8 +201,8 @@ function prefix_remove_css_section($wp_customize)
 {
     $wp_customize->remove_section('custom_css');
 }
-
 add_action('customize_register', 'prefix_remove_css_section', 15);
+
 
 /**
  * @desc Remove access to Plugin or Theme editor in WP admin

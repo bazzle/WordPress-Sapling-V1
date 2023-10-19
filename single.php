@@ -1,9 +1,6 @@
 <?php get_header();
-if ( have_posts() ) :  ?>
-    <?php while ( have_posts() ) : the_post();
-            $tldr = get_field('tldr_content');
-            $block_height = get_field('block_height');
-        ?>
+if ( have_posts() ) :
+    while ( have_posts() ) : the_post(); ?>
         <div class="o-single">
             <div class="o-single__hero">
                 <div class="o-row">
@@ -12,10 +9,6 @@ if ( have_posts() ) :  ?>
                         <div class="o-single__metadata">
                             <time class="o-single__metadata__item"><?php echo get_the_time( 'F jS, Y' ); ?></time>
                             <span class="o-single__metadata__divider">/</span>
-                            <?php if($block_height) : ?>
-                                <span class="o-single__metadata__item"><?php echo 'Block height: ' . $block_height; ?></span>
-                                <span class="o-single__metadata__divider">/</span>
-                            <?php endif; ?>
                             <span class="o-single__metadata__item">
                                 Less than <?php echo reading_time(); ?> minute read
                             </span>
@@ -32,11 +25,9 @@ if ( have_posts() ) :  ?>
             <div class="o-row">
                 <div class="o-row-container">
                     <div class="o-single__content">
-                        <?php if($tldr) : ?>
+                        <?php if(has_excerpt()) : ?>
                             <div class="o-single__tldr">
-                                <p>
-                                    <?php echo esc_textarea($tldr) ?>
-                                </p>
+                                <?php the_excerpt(); ?>
                             </div>
                         <?php endif; ?>
                         <?php the_content() ?>
@@ -45,7 +36,7 @@ if ( have_posts() ) :  ?>
             </div>
 
         </div>
-    <?php endwhile; ?>
-<? endif; ?>
+    <?php endwhile;
+endif; ?>
 
 <?php get_footer();

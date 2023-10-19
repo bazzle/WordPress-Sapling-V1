@@ -39,14 +39,6 @@
   }
   &__tldr{
     @include gap(padding-bottom);
-    p{
-      @include font-serif;
-      font-weight: 600;
-      line-height: 1.3;
-      @include font-sans;
-      font-size: clamp(2.4rem, 3vw, 3.5rem);
-      margin-bottom: 0;
-    }
   }
   &__featured-image{
     width: 100%;
