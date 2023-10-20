@@ -22,8 +22,8 @@ $edgepadding-mobile--loose: 3rem;
 
 .o-row{
   width: 100%;
-  @include gap(margin-top);
-  @include gap(margin-bottom);
+  margin-top: $gap;
+  margin-bottom: $gap;
   @include padding-loose;
 }
 

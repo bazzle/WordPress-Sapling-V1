@@ -1,9 +1,19 @@
 .o-single{
   &__title{
     @include text-heading-single;
-    color: $color-accent;
-    @include gap(margin-top, 2);
-    @include gap(margin-bottom);
+    margin-top:$gap--deep;
+    margin-bottom:$gap;
+  }
+  &__content{
+    >*{
+      margin-bottom:$gap;
+    }
+    h2{
+      @include text-heading;
+    }
+    h3, h4, h5{
+      @include text-heading--lower;
+    }
   }
   &__metadata{
     display:flex;
@@ -36,9 +46,6 @@
       height: 4px;
       background-color: $color-accent;
     }
-  }
-  &__tldr{
-    @include gap(padding-bottom);
   }
   &__featured-image{
     width: 100%;

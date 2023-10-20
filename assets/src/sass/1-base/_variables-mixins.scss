@@ -27,6 +27,7 @@ $padding-deep: clamp(3rem, 5vw, 6rem);
 
 $white: #fff;
 $black: #000;
+$off-black: #333;
 
 // Fancy transitions
 // ------------------------------------------------------------
@@ -60,11 +61,6 @@ $border-radius: 3px;
 
 // Gaps/margins/alignment
 // ------------------------------------------------------------
-
-// Gap – USAGE: @include gap(margin-top,2)
-@mixin gap($prop, $multiplier:1) {
-  #{$prop}:calc(#{$gap} * #{$multiplier});
-}
 
 // align
 @mixin flex-center {

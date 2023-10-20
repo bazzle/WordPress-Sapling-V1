@@ -1,9 +1,9 @@
 .o-index{
   &__container{
-    @include gap(padding-top,2);
-    @include gap(padding-bottom,2);
+    padding-top: $gap--deep;
+    padding-bottom: $gap--deep;
   }
   &__item{
-    @include gap(padding-bottom,1);
+    padding-bottom: $gap;
   }
 }

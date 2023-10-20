@@ -1,4 +1,4 @@
 .o-footer{
-    @include gap(padding-top,2);
-    @include gap(padding-bottom,2);
+    padding-top: $gap;
+    padding-bottom: $gap;
 }

@@ -8,15 +8,23 @@
     align-items: center;
     color: $color-brand;
     cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items:center;
     @media (prefers-color-scheme: dark) {
       color: $white;
     }
-  }
-  &__image{
-    img{
-      max-height:100px;
+    img, svg{
+      max-height:40px;
       width:auto;
     }
+  }
+  &__site-name{
+    @include font-sans-bold;
+    font-size:2.4rem;
+    text-transform: uppercase;
+    padding-left: .5em;
+    color: $color-brand;
   }
   &__link{
     display: block;

@@ -1,10 +1,7 @@
 .o-header{
-  @include gap(padding-top,2);
+  padding-top: $gap--deep;
   &__container{
     display: flex;
     position: relative;
-  }
-  &__title{
-    width: 100%;
   }
 }

@@ -1,10 +1,10 @@
 // Custom colors
 // ------------------------------------------------------------
-$color-brand: #21C4B2;
+$color-brand: #00b682;
 
 // accents
 // ------------------------------------------------------------
-$color-accent: #21C4B2;
+$color-accent: #FF6978;
 $color-accent--light: color.adjust($color-accent, $lightness: 10%);
 
 // Background colors
@@ -18,7 +18,7 @@ $color-bg-2--dark: #151515;
 
 // Text colors
 // ------------------------------------------------------------
-$color-text: #333;
+$color-text: $off-black;
 $color-text-link: $color-accent;
 
 // Dark

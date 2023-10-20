@@ -25,7 +25,7 @@ body{
   width: 100%;
   min-height: 100vh;
   margin: 0;
-  @include font-serif;
+  @include font-sans;
   font-size: $font-size-standard;
   text-align: left;
   overflow-x: hidden;
@@ -40,20 +40,12 @@ body{
 // Headings
 // ------------------------------------------------------------
 
-h1{
-  @include text-heading--upper;
+h1, h2, h3, h4, h5{
+  font-size:3vw;
 }
 
-h2, h3{
-  @include text-heading;
-}
-
-h4, h5{
-  @include text-heading--lower;
-}
-
-h2, h3, h4, h5, p, a, ol, hr, blockquote{
-  @include gap(margin-bottom);
+p, a, ol, hr, blockquote{
+  margin-bottom:$gap;
 }
 
 // Links
@@ -101,8 +93,8 @@ a{
 
 blockquote{
     $left: calc(29px + 1.2rem);
-    @include gap(margin-top, 2);
-    @include gap(margin-bottom, 2);
+    margin-top: $gap--deep;
+    margin-bottom: $gap--deep;
     padding-left: calc(29px + 1.2rem);
     position: relative;
     @include break(site-width-margins-plus){
@@ -119,7 +111,7 @@ blockquote{
         font-style: italic;
         font-size: 3rem;
         &:first-of-type{
-            @include gap(padding-top);
+            padding-top: $gap;
         }
         &:last-of-type{
             margin-bottom: 0;

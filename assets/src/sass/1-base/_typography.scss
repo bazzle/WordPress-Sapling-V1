@@ -42,8 +42,8 @@
 // Text variables
 // ------------------------------------------------------------
 
-$font-size-base:10px;
-$font-size-standard:1.6rem;
+$font-size-base: 10px;
+$font-size-standard: 1.6rem;
 
 // Text mixins for specific uses
 // ------------------------------------------------------------
@@ -81,17 +81,20 @@ $font-size-standard:1.6rem;
 // Default top-level heading
 @mixin text-heading--upper {
     @include font-sans-bold;
-    font-size: clamp(4rem, 4vw, 6rem);
+    //font-size: clamp(4rem, 4vw, 6rem);
+    font-size:4vw;
     line-height: 1;
 }
 @mixin text-heading {
     @include font-sans-bold;
-    font-size: clamp(4rem, 4vw, 6rem);
+    //font-size: clamp(4rem, 4vw, 6rem);
+    font-size:3vw;
     line-height: 1;
 }
 @mixin text-heading--lower {
     @include font-sans-bold;
-    font-size: clamp(4rem, 4vw, 6rem);
+    //font-size: clamp(4rem, 4vw, 6rem);
+    font-size:2vw;
     line-height: 1;
 }
 
@@ -99,7 +102,8 @@ $font-size-standard:1.6rem;
 // Typically single article h1 headings, or hierarchical pages, like pillar pages
 @mixin text-heading-single {
     @include font-sans-bold;
-    font-size: clamp(3rem, 6vw, 6rem);
+    //font-size: clamp(3rem, 6vw, 6rem);
+    font-size:6vw;
     line-height: 1;
 }
 
@@ -107,7 +111,8 @@ $font-size-standard:1.6rem;
 // Typically single article h2's or pillar page section headings
 @mixin text-heading-body {
     @include font-sans-bold;
-    font-size: clamp(4rem, 4vw, 6rem);
+    //font-size: clamp(3rem, 6vw, 5rem);
+    font-size:3vw;
     line-height: 1;
 }
 
@@ -115,7 +120,8 @@ $font-size-standard:1.6rem;
 // We don't make any visual differentiation between h3's and h4's
 @mixin text-heading-body--lower {
     @include font-sans-bold;
-    font-size: clamp(4rem, 4vw, 6rem);
+    //font-size: clamp(4rem, 4vw, 6rem);
+    font-size:2vw;
     line-height: 1;
 }
 
@@ -126,14 +132,14 @@ $font-size-standard:1.6rem;
     color: inherit;
     line-height: 1.8;
     @include text-body;
-    @include gap(margin-bottom);
+    margin-bottom:$gap;
 }
 
 @mixin ullistdefaults {
     padding: 0;
     @include text-body;
     list-style-position: inside;
-    @include gap(margin-bottom);
+    margin-bottom:$gap;
     li {
         position: relative;
         display: block;
@@ -157,7 +163,7 @@ $font-size-standard:1.6rem;
     list-style: none;
     counter-reset: li;
     list-style-position: inside;
-    @include gap(margin-bottom);
+    margin-bottom:$gap;
     li {
         counter-increment: item;
         position: relative;
