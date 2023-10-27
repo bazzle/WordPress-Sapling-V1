@@ -26,10 +26,3 @@ include 'functions/menus.php';
 
 /* @desc Miscellaneous */
 include 'functions/misc.php';
-
-function cssfix() {
-  echo '<style>
-  .editor-styles-wrapper{padding:0!important;}
-  </style>';
-}
-add_action('admin_head', 'cssfix');

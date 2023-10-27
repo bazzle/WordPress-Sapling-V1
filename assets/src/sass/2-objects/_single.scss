@@ -1,7 +1,9 @@
 .o-single{
+  &__head{
+    margin-bottom: $gap--deep;
+  }
   &__title{
     @include text-heading-single;
-    margin-top:$gap--deep;
     margin-bottom:$gap;
   }
   &__content{
@@ -13,6 +15,9 @@
     }
     h3, h4, h5{
       @include text-heading--lower;
+    }
+    p{
+      @include text-body;
     }
   }
   &__metadata{

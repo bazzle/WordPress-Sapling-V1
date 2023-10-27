@@ -1,9 +1,11 @@
 .o-index{
   &__container{
-    padding-top: $gap--deep;
-    padding-bottom: $gap--deep;
+    padding-bottom: $gap;
   }
   &__item{
     padding-bottom: $gap;
+    p{
+      margin-bottom: 0;
+    }
   }
 }

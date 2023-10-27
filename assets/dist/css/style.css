@@ -318,91 +318,116 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-size: 3vw;
+  font-size: clamp(2.5rem, 3vw, 5rem);
 }
 
 p, a, ol, hr, blockquote {
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
 
-a {
+a:not(.wp-element-button) {
   outline: none;
-  text-decoration: none;
   transition: all 100ms ease-out;
+  text-decoration: underline;
+  color: #ff364a;
+}
+a:not(.wp-element-button):visited {
   color: #FF6978;
 }
-a:active {
-  outline: 2px solid #FF6978;
+a:not(.wp-element-button):focus {
+  background-color: #ff364a;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+a:not(.wp-element-button):hover {
+  color: #ff364a;
+  text-decoration: none;
+}
+a:not(.wp-element-button):active {
+  background-color: #ff838f;
+  color: #000;
+  text-decoration: none;
+  outline: none;
 }
 @media (prefers-color-scheme: dark) {
-  a:active {
-    outline: 2px solid #ff9ca6;
+  a:not(.wp-element-button) {
+    outline: none;
+    transition: all 100ms ease-out;
+    text-decoration: underline;
+    color: #FF6978;
   }
-}
-a:focus {
-  outline: 2px solid #FF6978;
-}
-@media (prefers-color-scheme: dark) {
-  a:focus {
-    outline: 2px solid #ff9ca6;
+  a:not(.wp-element-button):visited {
+    color: #ff838f;
   }
-}
-a:active {
-  border-bottom: 1px solid #FF6978;
-}
-@media (prefers-color-scheme: dark) {
-  a:active {
-    border-color: #FF6978;
+  a:not(.wp-element-button):focus {
+    background-color: #ff838f;
+    color: #000;
+    text-decoration: none;
+    outline: none;
   }
-}
-a:focus {
-  border-bottom: 1px solid #FF6978;
-}
-@media (prefers-color-scheme: dark) {
-  a:focus {
-    border-color: #FF6978;
+  a:not(.wp-element-button):hover {
+    color: #ff364a;
+    text-decoration: none;
   }
-}
-a:visited {
-  border-bottom: 1px solid #FF6978;
-}
-@media (prefers-color-scheme: dark) {
-  a:visited {
-    border-color: #FF6978;
+  a:not(.wp-element-button):active {
+    background-color: #ff838f;
+    color: #000;
+    text-decoration: none;
+    outline: none;
   }
 }
 
-blockquote {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+blockquote.wp-block-quote, blockquote.wp-block-quote--long {
+  margin-top: clamp(4rem, 4vw, 6rem);
+  margin-bottom: clamp(4rem, 4vw, 6rem);
   padding-left: calc(29px + 1.2rem);
   position: relative;
 }
 @media screen and (min-width: calc(900px + 3rem + 60px)) {
-  blockquote {
+  blockquote.wp-block-quote, blockquote.wp-block-quote--long {
     left: calc(-29px - 1.2rem);
   }
 }
-blockquote p {
-  position: relative;
-  font-weight: 700;
-  line-height: 1.4;
+blockquote.wp-block-quote::before, blockquote.wp-block-quote--long::before {
+  position: absolute;
+  left: 0;
+  top: -1.2rem;
+  content: "";
+  width: 29px;
+  height: 28px;
   display: block;
-  font-style: normal;
+  background-image: url(/wp-content/themes/sapling/assets/dist/img/quotemark.svg);
+  color: #FF6978;
+  background-size: cover;
+}
+blockquote.wp-block-quote p, blockquote.wp-block-quote--long p {
+  position: relative;
+  display: block;
   margin-bottom: 0.5em;
   font-family: "Cormorant", serif;
-  font-weight: 500;
-  font-style: italic;
-  font-style: italic;
-  font-size: 3rem;
+  font-weight: 700;
+  font-size: 3.8rem;
+  color: #ff364a;
 }
-blockquote p:first-of-type {
-  padding-top: 1.5rem;
+@media (prefers-color-scheme: dark) {
+  blockquote.wp-block-quote p, blockquote.wp-block-quote--long p {
+    color: #ff838f;
+  }
 }
-blockquote p:last-of-type {
+blockquote.wp-block-quote p:first-of-type, blockquote.wp-block-quote--long p:first-of-type {
+  border-top: 1px solid #ff364a;
+  padding-top: clamp(1rem, 1.5vw, 2rem);
+}
+@media (prefers-color-scheme: dark) {
+  blockquote.wp-block-quote p:first-of-type, blockquote.wp-block-quote--long p:first-of-type {
+    border-top: 1px solid #ff838f;
+  }
+}
+blockquote.wp-block-quote p:last-of-type, blockquote.wp-block-quote--long p:last-of-type {
   margin-bottom: 0;
 }
-blockquote cite {
+blockquote.wp-block-quote cite, blockquote.wp-block-quote--long cite {
   font-family: "Cormorant", serif;
   font-weight: 700;
   font-style: italic;
@@ -411,14 +436,21 @@ blockquote cite {
   padding-top: 0.6em;
   line-height: 1;
 }
+blockquote.wp-block-quote--long p {
+  line-height: 1.8;
+  font-size: 2.2rem;
+}
+blockquote.wp-block-quote--long cite {
+  font-size: 2.4rem;
+}
 
 p, li {
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  line-height: 1.6;
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
 }
 p a, li a {
-  text-decoration: underline;
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
 }
@@ -433,17 +465,19 @@ p {
   line-height: 1.8;
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
+  margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
 
 ul {
   padding: 0;
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  line-height: 1.6;
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
   list-style-position: inside;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
 ul li {
   position: relative;
@@ -466,11 +500,12 @@ ol {
   padding: 0;
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  line-height: 1.6;
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
   list-style: none;
   counter-reset: li;
   list-style-position: inside;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
 ol li {
   counter-increment: item;
@@ -507,7 +542,8 @@ ul li {
 }
 @media (prefers-color-scheme: dark) {
   ::selection {
-    background-color: #ff9ca6;
+    background-color: #ff838f;
+    color: #000;
   }
 }
 
@@ -644,7 +680,7 @@ textarea {
 }
 
 .o-header {
-  padding-top: 3rem;
+  padding-top: clamp(4rem, 4vw, 6rem);
 }
 .o-header__container {
   display: flex;
@@ -652,27 +688,28 @@ textarea {
 }
 
 .o-main {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: clamp(4rem, 4vw, 6rem);
 }
 
 .o-index__container {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: clamp(3rem, 2.5vw, 4rem);
 }
 .o-index__item {
-  padding-bottom: 1.5rem;
+  padding-bottom: clamp(3rem, 2.5vw, 4rem);
+}
+.o-index__item p {
+  margin-bottom: 0;
 }
 
 .o-footer {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: clamp(3rem, 2.5vw, 4rem);
+  padding-bottom: clamp(3rem, 2.5vw, 4rem);
 }
 
 .o-row {
   width: 100%;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: clamp(3rem, 2.5vw, 4rem);
+  margin-bottom: clamp(3rem, 2.5vw, 4rem);
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -695,35 +732,46 @@ textarea {
   max-width: 1100px;
 }
 
+.o-single__head {
+  margin-bottom: clamp(4rem, 4vw, 6rem);
+}
 .o-single__title {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
-  font-size: 6vw;
-  line-height: 1;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(3rem, 4.5vw, 8rem);
+  line-height: 1.2;
+  margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
 .o-single__content > * {
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
 .o-single__content h2 {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
-  font-size: 3vw;
-  line-height: 1;
+  font-size: clamp(2.2rem, 2.5vw, 3.5rem);
+  line-height: 1.2;
 }
 .o-single__content h3, .o-single__content h4, .o-single__content h5 {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
-  font-size: 2vw;
-  line-height: 1;
+  font-size: clamp(2rem, 2.5vw, 3.2rem);
+  line-height: 1.2;
+}
+.o-single__content p {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
 }
 .o-single__metadata {
   display: flex;
   gap: 0.5em;
   flex-direction: column;
   font-family: "IBM Plex Sans", serif;
-  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: initial;
+  letter-spacing: 0.02em;
 }
 @media screen and (min-width: 22.438em) {
   .o-single__metadata {
@@ -774,22 +822,23 @@ textarea {
 .o-logo-lockup {
   display: flex;
   align-items: center;
+  position: relative;
+  color: #00b682;
+}
+@media (prefers-color-scheme: dark) {
+  .o-logo-lockup {
+    color: #fff;
+  }
 }
 .o-logo-lockup__logo {
   transition: 0.1s;
   position: relative;
   display: block;
   align-items: center;
-  color: #00b682;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (prefers-color-scheme: dark) {
-  .o-logo-lockup__logo {
-    color: #fff;
-  }
 }
 .o-logo-lockup__logo img, .o-logo-lockup__logo svg {
   max-height: 40px;
@@ -801,30 +850,94 @@ textarea {
   font-size: 2.4rem;
   text-transform: uppercase;
   padding-left: 0.5em;
-  color: #00b682;
-}
-.o-logo-lockup__link {
   display: block;
-  white-space: nowrap;
+}
+.o-logo-lockup a {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 1;
+  display: block;
+}
+.o-logo-lockup a:focus {
+  background-color: unset;
+  outline: 3px solid #FF6978;
+}
+@media (prefers-color-scheme: dark) {
+  .o-logo-lockup a:focus {
+    outline-color: #ff838f;
+  }
 }
 
-.c-index-item {
-  padding-bottom: 1.5rem;
+.c-index-item__title {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 3vw, 5rem);
+  line-height: 1.2;
+}
+.c-index-item__title a {
+  outline: none;
+  transition: all 100ms ease-out;
+  text-decoration: underline;
+  color: #000;
+}
+.c-index-item__title a:visited {
+  color: #333;
+}
+.c-index-item__title a:focus {
+  background-color: #FF6978;
+  color: #000;
+  text-decoration: none;
+  outline: none;
+}
+.c-index-item__title a:hover {
+  text-decoration: none;
+}
+.c-index-item__title a:active {
+  background-color: #FF6978;
+  color: #000;
+  text-decoration: none;
+  outline: none;
+}
+@media (prefers-color-scheme: dark) {
+  .c-index-item__title a {
+    outline: none;
+    transition: all 100ms ease-out;
+    text-decoration: underline;
+    color: #fff;
+  }
+  .c-index-item__title a:visited {
+    color: #f7f7f7;
+  }
+  .c-index-item__title a:focus {
+    background-color: #FF6978;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+  }
+  .c-index-item__title a:hover {
+    text-decoration: none;
+  }
+  .c-index-item__title a:active {
+    background-color: #FF6978;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+  }
 }
 .c-index-item__metadata {
   display: flex;
   gap: 0.5em;
   flex-direction: column;
   font-family: "IBM Plex Sans", serif;
-  font-size: 1.4rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: initial;
+  letter-spacing: 0.02em;
+  padding-top: clamp(1rem, 1.5vw, 2rem);
+  padding-bottom: clamp(1rem, 1.5vw, 2rem);
 }
 @media screen and (min-width: 22.438em) {
   .c-index-item__metadata {
@@ -845,150 +958,95 @@ textarea {
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 2.8rem;
+  line-height: 1.5;
 }
 
-.c-card {
-  padding: 1.5rem;
-  border-bottom: 1px solid #FF6978;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  position: relative;
-}
-.c-card:last-of-type {
-  border-bottom: 0;
-}
-.c-card__title {
+.wp-block-button a {
   font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  font-size: 3rem;
-  line-height: 1;
-  color: #FF6978;
-}
-@media screen and (min-width: calc(1100px + 3rem)) {
-  .c-card__title {
-    font-size: 3.5rem;
-  }
-}
-.c-card__title:hover {
-  color: #FF6978;
-}
-.c-card__title__link {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.c-card__metadata {
-  display: flex;
-  gap: 0.5em;
-  flex-direction: column;
-}
-@media screen and (min-width: 22.438em) {
-  .c-card__metadata {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 40.063em) {
-  .c-card__metadata {
-    flex-direction: column;
-    align-items: unset;
-  }
-}
-@media screen and (min-width: calc(1100px + 3rem)) {
-  .c-card__metadata {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-.c-card__metadata__divider {
-  display: none;
-}
-@media screen and (min-width: 22.438em) {
-  .c-card__metadata__divider {
-    display: block;
-  }
-}
-@media screen and (min-width: 40.063em) {
-  .c-card__metadata__divider {
-    display: none;
-  }
-}
-@media screen and (min-width: calc(1100px + 3rem)) {
-  .c-card__metadata__divider {
-    display: block;
-  }
-}
-.c-card__date {
-  font-family: "IBM Plex Sans", serif;
-  font-size: 1.4rem;
-}
-.c-card__blockheight {
-  font-family: "IBM Plex Sans", serif;
-  font-size: 1.4rem;
-}
-.c-card__excerpt {
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-  flex-grow: 1;
-}
-.c-card__cta {
-  gap: 3rem;
-  display: flex;
-  align-items: center;
-}
-.c-card__cta__button {
-  flex-shrink: 0;
-}
-.c-card__cta::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #FF6978;
-}
-
-button {
-  transition: all 100ms ease-out;
-}
-
-.e-button {
-  font-family: "IBM Plex Sans", serif;
-  font-size: 1.4rem;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   position: relative;
-  display: inline-block;
+  display: block;
   width: auto;
   padding: 1em 1.2em;
-  border: 1px solid #FF6978;
-  color: #fff;
+  border-radius: 2px !important;
   text-align: center;
-  text-transform: uppercase;
   cursor: pointer;
   transition-duration: 0.2s;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.8, 0, 0.3, 1);
-}
-.e-button:hover {
-  color: #FF6978;
-}
-.e-button:active {
-  color: #FF6978;
-}
-.e-button:focus {
   color: #000;
-  background: #FF6978;
+  background-color: #FF6978;
+  margin-bottom: 0;
+}
+.wp-block-button a:hover {
+  background-color: #ff5061;
+  color: #000;
   outline: none;
+}
+.wp-block-button a:active {
+  background-color: #ff5061 !important;
+  color: #fff;
+  outline: 3px solid #FF6978;
+}
+@media (prefers-color-scheme: dark) {
+  .wp-block-button a:active {
+    outline-color: #ff838f;
+  }
+}
+.wp-block-button a:focus {
+  background-color: #ff5061 !important;
+  color: #fff;
+  outline: 3px solid #FF6978;
+}
+@media (prefers-color-scheme: dark) {
+  .wp-block-button a:focus {
+    outline-color: #ff838f;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .wp-block-button a {
+    color: #000;
+    background-color: #FF6978;
+  }
+  .wp-block-button a:hover {
+    background-color: #ff5061;
+    color: #000;
+    outline: none;
+  }
+  .wp-block-button a:active {
+    background-color: #ff5061 !important;
+    color: #000;
+    outline: 3px solid #FF6978;
+  }
+}
+@media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
+  .wp-block-button a:active {
+    outline-color: #ff838f;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .wp-block-button a:focus {
+    background-color: #ff5061 !important;
+    color: #000;
+    outline: 3px solid #FF6978;
+  }
+}
+@media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
+  .wp-block-button a:focus {
+    outline-color: #ff838f;
+  }
+}
+
+.wp-block-button {
+  padding: 0;
+  display: block;
+}
+
+.wp-block-buttons {
+  padding: 0 !important;
 }
 
 /*# sourceMappingURL=style.css.map */

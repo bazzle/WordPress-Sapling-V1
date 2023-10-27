@@ -5,7 +5,9 @@ $color-brand: #00b682;
 // accents
 // ------------------------------------------------------------
 $color-accent: #FF6978;
-$color-accent--light: color.adjust($color-accent, $lightness: 10%);
+$color-accent--lighter: color.adjust($color-accent, $lightness: 5%);
+$color-accent--darker-5: color.adjust($color-accent, $lightness: -5%);
+$color-accent--darker: color.adjust($color-accent, $lightness: -10%);
 
 // Background colors
 // ------------------------------------------------------------
@@ -19,11 +21,126 @@ $color-bg-2--dark: #151515;
 // Text colors
 // ------------------------------------------------------------
 $color-text: $off-black;
-$color-text-link: $color-accent;
 
 // Dark
 $color-text--dark: $white;
-$color-text-link--dark: $color-accent;
+
+// Focus and highlight colors
+// ------------------------------------------------------------
+
+$color-highlight--dark: $color-accent--lighter;
+$color-highlight--light: $color-accent;
+
+$color-outline--dark: $color-accent--lighter;
+$color-outline--light: $color-accent;
+
+
+// Link colour profiles
+// ------------------------------------------------------------
+
+@mixin linkDefaults{
+    outline: none;
+    transition: all 100ms ease-out;
+    text-decoration:underline;
+}
+
+// White on dark
+@mixin link--white-on-dark{
+    @include linkDefaults;
+    color:$white;
+    &:visited{
+        color: $off-white;
+    }
+    &:focus{
+        background-color: $color-accent;
+        color: $black;
+        text-decoration:none;
+        outline: none;
+    }
+    &:hover{
+        text-decoration: none;
+    }
+    &:active{
+        background-color: $color-accent;
+        color: $black;
+        text-decoration:none;
+        outline: none;
+    }
+}
+
+// Black on light
+@mixin link--black-on-light{
+    @include linkDefaults;
+    color:$black;
+    &:visited{
+        color: $off-black;
+    }
+    &:focus{
+        background-color: $color-accent;
+        color: $black;
+        text-decoration:none;
+        outline: none;
+    }
+    &:hover{
+        text-decoration: none;
+    }
+    &:active{
+        background-color: $color-accent;
+        color: $black;
+        text-decoration:none;
+        outline: none;
+    }
+}
+
+// color on light
+@mixin link--color-on-light{
+    @include linkDefaults;
+    color:$color-accent--darker;
+    &:visited{
+        color: $color-accent;
+    }
+    &:focus{
+        background-color: $color-accent--darker;
+        color: $white;
+        text-decoration:none;
+        outline: none;
+    }
+    &:hover{
+        color: $color-accent--darker;
+        text-decoration: none;
+    }
+    &:active{
+        background-color: $color-accent--lighter;
+        color: $black;
+        text-decoration:none;
+        outline: none;
+    }
+}
+
+// color on dark
+@mixin link--color-on-dark{
+    @include linkDefaults;
+    color:$color-accent;
+    &:visited{
+        color: $color-accent--lighter;
+    }
+    &:focus{
+        background-color: $color-accent--lighter;
+        color: $black;
+        text-decoration:none;
+        outline: none;
+    }
+    &:hover{
+        color: $color-accent--darker;
+        text-decoration: none;
+    }
+    &:active{
+        background-color: $color-accent--lighter;
+        color: $black;
+        text-decoration:none;
+        outline: none;
+    }
+}
 
 // line color
 // ------------------------------------------------------------

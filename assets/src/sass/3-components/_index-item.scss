@@ -1,5 +1,13 @@
 .c-index-item{
-  padding-bottom: $gap;
+  &__title{
+    @include text-heading--index;
+    a{
+      @include link--black-on-light;
+      @media (prefers-color-scheme: dark) {
+        @include link--white-on-dark;
+      }
+    }
+  }
   &__metadata{
     display:flex;
     gap: .5em;

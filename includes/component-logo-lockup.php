@@ -9,10 +9,10 @@
             </svg>
         <?php endif; ?>
     </div>
-    <div class="o-logo-lockup__site-name">
+    <span class="o-logo-lockup__site-name">
         <?php echo get_bloginfo( 'name' ); ?>
-        <a class="o-logo-lockup__link" href="<?php echo home_url(); ?>">
-            <span class="visually-hidden">Back to homepage</span>
-        </a>
-    </div>
+    </span>
+    <a class="o-logo-lockup__link" href="<?php echo home_url(); ?>">
+        <span class="visually-hidden">Back to homepage</span>
+    </a>
 </div>

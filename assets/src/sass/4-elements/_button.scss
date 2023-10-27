@@ -1,37 +1,58 @@
 // Button state
 // ------------------------------------------------------------
 
-@mixin btn-state($textcolor, $bgcolor){
-  @include transition();
-  &:hover {
-    color: $textcolor;
-  }
-  &:active{
-    color: $textcolor;
-  }
-}
-
-button{
-  transition: all 100ms ease-out;
-}
-
-.e-button{
-  @include text-blocky;
-  font-weight: 600;
-  font-size: 3rem;
+@mixin button{
+  @include font-sans-bold;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: .02em;
   position: relative;
-  display: inline-block;
+  display: block;
   width: auto;
   padding: 1em 1.2em;
-  border: 1px solid $color-accent;
-  color: $white;
+  border-radius: 2px!important;
   text-align: center;
-  text-transform: uppercase;
   cursor: pointer;
-  @include btn-state($color-accent, transparent);
-  &:focus{
-    color: #000;
-    background: $color-accent;
+  @include transition();
+  color: $black;
+  background-color: $color-accent;
+  &:hover {
+    background-color: $color-accent--darker-5;
+    color: $black;
     outline: none;
   }
+  &:active{
+    background-color: $color-accent--darker-5!important;
+    color: $white;
+    @include outline;
+  }
+  &:focus{
+    background-color: $color-accent--darker-5!important;
+    color: $white;
+    @include outline;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: $black;
+    background-color: $color-accent;
+    &:hover {
+      background-color: $color-accent--darker-5;
+      color: $black;
+      outline: none;
+    }
+    &:active{
+      background-color: $color-accent--darker-5!important;
+      color: $black;
+      @include outline;
+    }
+    &:focus{
+      background-color: $color-accent--darker-5!important;
+      color: $black;
+      @include outline;
+    }
+  }
+}
+
+.wp-block-button a{
+  @include button;
+  margin-bottom: 0;
 }

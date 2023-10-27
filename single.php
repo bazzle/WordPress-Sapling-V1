@@ -4,7 +4,7 @@ if ( have_posts() ) :
         <div class="o-single">
             <div class="o-single__hero">
                 <div class="o-row">
-                    <div class="o-row-container">
+                    <div class="o-row-container o-single__head">
                         <h1 class="o-single__title"><?php the_title() ?></h1>
                         <div class="o-single__metadata">
                             <time class="o-single__metadata__item"><?php echo get_the_time( 'F jS, Y' ); ?></time>

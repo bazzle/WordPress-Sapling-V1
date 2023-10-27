@@ -7,11 +7,12 @@
     "sass-watch": "sass --watch assets/src/sass/main.scss:assets/dist/css/style.css",
     "postcss": "postcss assets/dist/css/style.css --use autoprefixer -o assets/dist/css/style.css",
     "build": "yarn sass && yarn postcss && yarn rollup",
-    "watch": "concurrently \"yarn sass-watch\" \"yarn stylelint-watch\" \"yarn serve\" \"yarn watch-js\"",
     "stylelint": "stylelint 'assets/src/sass/**/*.scss'",
     "stylelint-watch": "onchange 'assets/src/sass/**/*.scss' -- yarn stylelint",
     "rollup": "rollup -c",
-    "watch-js": "rollup -c -w"
+    "watch-js": "rollup -c -w",
+    "watch": "concurrently \"yarn sass-watch\" \"yarn stylelint-watch\" \"yarn serve\" \"yarn watch-js\"",
+    "serve": "browser-sync start --proxy wpstarter.local --files 'assets/dist/css/*.css'"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
