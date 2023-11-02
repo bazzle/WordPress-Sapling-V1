@@ -1,10 +1,10 @@
-# WordPress starter v2 Sapling
+# Sapling V1
 
 ![Theme Screenshot](https://github.com/bazzle/wordpress-starter-v2/blob/main/screenshot.jpg)
 
 ## Description
 
-My personal starter theme.
+My personal WordPress starter theme.
 
 ## Installation
 
