@@ -7,7 +7,7 @@ html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: $font-size-base;
+  font-size: $font-size-std;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-synthesis: none;
@@ -58,69 +58,6 @@ a:not(.wp-element-button){
   }
 }
 
-// Blockquote
-// ------------------------------------------------------------
-
-blockquote.wp-block-quote{
-  $left: calc(29px + 1.2rem);
-  margin-top: $gap--deep;
-  margin-bottom: $gap--deep;
-  padding-left: calc(29px + 1.2rem);
-  position: relative;
-  @include break(site-width-margins-plus){
-    left: calc(0px - 29px - 1.2rem);
-  }
-  &::before{
-      position: absolute;
-      left: 0;
-      top: -1.2rem;
-      content:'';
-      width:29px;
-      height:28px;
-      display: block;
-      background-image: url(#{$image-path}/quotemark.svg);
-      color: $color-accent;
-      background-size: cover;
-  }
-  p{
-      position: relative;
-      display: block;
-      margin-bottom: .5em;
-      @include font-serif-bold;
-      font-size: 3.8rem;
-      color:$color-accent--darker;
-      @media (prefers-color-scheme:dark){
-        color:$color-accent--lighter;
-      }
-      &:first-of-type{
-          border-top: 1px solid $color-accent--darker;
-          @media (prefers-color-scheme:dark){
-            border-top: 1px solid $color-accent--lighter;
-          }
-          padding-top: $gap--shallow;
-      }
-      &:last-of-type{
-          margin-bottom: 0;
-      }
-  }
-  cite{
-      @include font-serif-bold-italic;
-      font-size: 2.6rem;
-      display: block;
-      padding-top: .6em;
-      line-height: 1;
-  }
-  &--long{
-    @extend .wp-block-quote;
-      p{
-          line-height: 1.8;
-          font-size: 2.2rem;
-      }
-      cite{
-          font-size: 2.4rem;
-      }
-  }
-}
 
 // Formatting elements
 // ------------------------------------------------------------

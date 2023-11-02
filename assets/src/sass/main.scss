@@ -2,16 +2,18 @@
 
 @import '0-lib/reset';
 
+@import '1-base/resets';
 @import '1-base/variables-mixins';
 @import '1-base/breakpoints';
 @import '1-base/themes';
 @import '1-base/typography';
-@import '1-base/base';
-@import '1-base/wordpress';
 @import '1-base/utilities';
+@import '1-base/formatting';
+@import '1-base/html-body';
 
 @import '2-objects/header';
 @import '2-objects/main';
+@import '2-objects/content';
 @import '2-objects/index';
 @import '2-objects/footer';
 @import '2-objects/row';
@@ -19,6 +21,7 @@
 @import '2-objects/logo-lockup';
 
 @import '3-components/index-item';
+@import '3-components/blockquote';
 
 @import '4-elements/button';
 

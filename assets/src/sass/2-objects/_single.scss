@@ -6,20 +6,6 @@
     @include text-heading-single;
     margin-bottom:$gap;
   }
-  &__content{
-    >*{
-      margin-bottom:$gap;
-    }
-    h2{
-      @include text-heading;
-    }
-    h3, h4, h5{
-      @include text-heading--lower;
-    }
-    p{
-      @include text-body;
-    }
-  }
   &__metadata{
     display:flex;
     gap: .5em;

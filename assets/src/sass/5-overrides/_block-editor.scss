@@ -1,0 +1,7 @@
+.block-editor-block-list{
+    &__layout{
+        @media (prefers-color-scheme: dark) {
+            background-color:$black!important;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+*{
+  &,
+  &::before,
+  &::after{
+    box-sizing: inherit;
+  }
+  font-synthesis: inherit;
+}
+
+address{
+  font-size: inherit;
+  font-style: inherit;
+}
+
+figure{
+  margin: 0;
+}
+
+.touch{
+  cursor: pointer;
+}
+
+a,
+area,
+button,
+[role='button'],
+input:not([type='range']),
+label,
+select,
+summary,
+textarea{
+  touch-action: manipulation;
+}

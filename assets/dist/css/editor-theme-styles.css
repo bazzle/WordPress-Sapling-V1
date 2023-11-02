@@ -1,231 +1,206 @@
 @charset "UTF-8";
-/* resset.dev • v5.0.2 */
-/* # =================================================================
-   # Global selectors
-   # ================================================================= */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,700;1,500;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap");
-html {
+.editor-styles-wrapper {
+  /* resset.dev • v5.0.2 */
+  /* # =================================================================
+     # Global selectors
+     # ================================================================= */
+  /* # =================================================================
+     # General elements
+     # ================================================================= */
+  /* https://gist.github.com/unruthless/413930 */
+  /* # =================================================================
+     # Forms
+     # ================================================================= */
+  /* Apply cursor pointer to button elements */
+  /* Remove inner padding and border in Firefox 4+ */
+  /* Replace focus style removed in the border reset above */
+  /* Remove the default button styling in all browsers */
+  /* Style select like a standard input */
+  /* Replace pointer cursor in disabled elements */
+  /* # =================================================================
+     # Specify media element style
+     # ================================================================= */
+  /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+  /* # =================================================================
+     # Accessibility
+     # ================================================================= */
+  /* Specify the progress cursor of updating elements */
+  /* Specify the pointer cursor of trigger elements */
+  /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+}
+.editor-styles-wrapper html {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
   word-break: normal;
   -moz-tab-size: 4;
   tab-size: 4;
 }
-
-*,
-::before,
-::after {
+.editor-styles-wrapper *,
+.editor-styles-wrapper ::before,
+.editor-styles-wrapper ::after {
   background-repeat: no-repeat; /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
   box-sizing: inherit;
 }
-
-::before,
-::after {
+.editor-styles-wrapper ::before,
+.editor-styles-wrapper ::after {
   text-decoration: inherit; /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
   vertical-align: inherit;
 }
-
-* {
+.editor-styles-wrapper * {
   padding: 0; /* Reset `padding` and `margin` of all elements */
   margin: 0;
 }
-
-/* # =================================================================
-   # General elements
-   # ================================================================= */
-hr {
+.editor-styles-wrapper hr {
   overflow: visible; /* Show the overflow in Edge and IE */
   height: 0; /* Add the correct box sizing in Firefox */
   color: inherit; /* Correct border color in Firefox. */
 }
-
-details,
-main {
+.editor-styles-wrapper details,
+.editor-styles-wrapper main {
   display: block; /* Render the `main` element consistently in IE. */
 }
-
-summary {
+.editor-styles-wrapper summary {
   display: list-item; /* Add the correct display in all browsers */
 }
-
-small {
+.editor-styles-wrapper small {
   font-size: 80%; /* Set font-size to 80% in `small` elements */
 }
-
-[hidden] {
+.editor-styles-wrapper [hidden] {
   display: none; /* Add the correct display in IE */
 }
-
-abbr[title] {
+.editor-styles-wrapper abbr[title] {
   border-bottom: none; /* Remove the bottom border in Chrome 57 */
   /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
   text-decoration: underline;
   text-decoration: underline dotted;
 }
-
-a {
+.editor-styles-wrapper a {
   background-color: transparent; /* Remove the gray background on active links in IE 10 */
 }
-
-a:active,
-a:hover {
+.editor-styles-wrapper a:active,
+.editor-styles-wrapper a:hover {
   outline-width: 0; /* Remove the outline when hovering in all browsers */
 }
-
-code,
-kbd,
-pre,
-samp {
+.editor-styles-wrapper code,
+.editor-styles-wrapper kbd,
+.editor-styles-wrapper pre,
+.editor-styles-wrapper samp {
   font-family: monospace, monospace; /* Specify the font family of code elements */
 }
-
-pre {
+.editor-styles-wrapper pre {
   font-size: 1em; /* Correct the odd `em` font sizing in all browsers */
 }
-
-b,
-strong {
+.editor-styles-wrapper b,
+.editor-styles-wrapper strong {
   font-weight: bolder; /* Add the correct font weight in Chrome, Edge, and Safari */
 }
-
-/* https://gist.github.com/unruthless/413930 */
-sub,
-sup {
+.editor-styles-wrapper sub,
+.editor-styles-wrapper sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-
-sub {
+.editor-styles-wrapper sub {
   bottom: -0.25em;
 }
-
-sup {
+.editor-styles-wrapper sup {
   top: -0.5em;
 }
-
-table {
+.editor-styles-wrapper table {
   border-color: inherit; /* Correct border color in all Chrome, Edge, and Safari. */
   text-indent: 0; /* Remove text indentation in Chrome, Edge, and Safari */
 }
-
-iframe {
+.editor-styles-wrapper iframe {
   border-style: none;
 }
-
-/* # =================================================================
-   # Forms
-   # ================================================================= */
-input {
+.editor-styles-wrapper input {
   border-radius: 0;
 }
-
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+.editor-styles-wrapper [type=number]::-webkit-inner-spin-button,
+.editor-styles-wrapper [type=number]::-webkit-outer-spin-button {
   height: auto; /* Correct the cursor style of increment and decrement buttons in Chrome */
 }
-
-[type=search] {
+.editor-styles-wrapper [type=search] {
   -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari */
   outline-offset: -2px; /* Correct the outline style in Safari */
 }
-
-[type=search]::-webkit-search-decoration {
+.editor-styles-wrapper [type=search]::-webkit-search-decoration {
   -webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS */
 }
-
-textarea {
+.editor-styles-wrapper textarea {
   overflow: auto; /* Internet Explorer 11+ */
   resize: vertical; /* Specify textarea resizability */
 }
-
-button,
-input,
-optgroup,
-select,
-textarea {
+.editor-styles-wrapper button,
+.editor-styles-wrapper input,
+.editor-styles-wrapper optgroup,
+.editor-styles-wrapper select,
+.editor-styles-wrapper textarea {
   font: inherit; /* Specify font inheritance of form elements */
 }
-
-optgroup {
+.editor-styles-wrapper optgroup {
   font-weight: bold; /* Restore the font weight unset by the previous rule */
 }
-
-button {
+.editor-styles-wrapper button {
   overflow: visible; /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
 }
-
-button,
-select {
+.editor-styles-wrapper button,
+.editor-styles-wrapper select {
   text-transform: none; /* Firefox 40+, Internet Explorer 11- */
 }
-
-/* Apply cursor pointer to button elements */
-button,
-[type=button],
-[type=reset],
-[type=submit],
-[role=button] {
+.editor-styles-wrapper button,
+.editor-styles-wrapper [type=button],
+.editor-styles-wrapper [type=reset],
+.editor-styles-wrapper [type=submit],
+.editor-styles-wrapper [role=button] {
   cursor: pointer;
 }
-
-/* Remove inner padding and border in Firefox 4+ */
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+.editor-styles-wrapper button::-moz-focus-inner,
+.editor-styles-wrapper [type=button]::-moz-focus-inner,
+.editor-styles-wrapper [type=reset]::-moz-focus-inner,
+.editor-styles-wrapper [type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
-
-/* Replace focus style removed in the border reset above */
-button:-moz-focusring,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+.editor-styles-wrapper button:-moz-focusring,
+.editor-styles-wrapper [type=button]::-moz-focus-inner,
+.editor-styles-wrapper [type=reset]::-moz-focus-inner,
+.editor-styles-wrapper [type=submit]::-moz-focus-inner {
   outline: 1px dotted ButtonText;
 }
-
-button,
-html [type=button],
-[type=reset],
-[type=submit] {
+.editor-styles-wrapper button,
+.editor-styles-wrapper html [type=button],
+.editor-styles-wrapper [type=reset],
+.editor-styles-wrapper [type=submit] {
   -webkit-appearance: button; /* Correct the inability to style clickable types in iOS */
 }
-
-/* Remove the default button styling in all browsers */
-button,
-input,
-select,
-textarea {
+.editor-styles-wrapper button,
+.editor-styles-wrapper input,
+.editor-styles-wrapper select,
+.editor-styles-wrapper textarea {
   background-color: transparent;
   border-style: none;
 }
-
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
+.editor-styles-wrapper a:focus,
+.editor-styles-wrapper button:focus,
+.editor-styles-wrapper input:focus,
+.editor-styles-wrapper select:focus,
+.editor-styles-wrapper textarea:focus {
   outline-width: 0;
 }
-
-/* Style select like a standard input */
-select {
+.editor-styles-wrapper select {
   -moz-appearance: none; /* Firefox 36+ */
   -webkit-appearance: none; /* Chrome 41+ */
 }
-
-select::-ms-expand {
+.editor-styles-wrapper select::-ms-expand {
   display: none; /* Internet Explorer 11+ */
 }
-
-select::-ms-value {
+.editor-styles-wrapper select::-ms-value {
   color: currentColor; /* Internet Explorer 11+ */
 }
-
-legend {
+.editor-styles-wrapper legend {
   border: 0; /* Correct `color` not being inherited in IE 8/9/10/11 */
   color: inherit; /* Correct the color inheritance from `fieldset` elements in IE */
   display: table; /* Correct the text wrapping in Edge and IE */
@@ -233,78 +208,55 @@ legend {
   white-space: normal; /* Correct the text wrapping in Edge and IE */
   max-width: 100%; /* Correct the text wrapping in Edge 18- and IE */
 }
-
-::-webkit-file-upload-button {
+.editor-styles-wrapper ::-webkit-file-upload-button {
   /* Correct the inability to style clickable types in iOS and Safari */
   -webkit-appearance: button;
   color: inherit;
   font: inherit; /* Change font properties to `inherit` in Chrome and Safari */
 }
-
-/* Replace pointer cursor in disabled elements */
-[disabled] {
+.editor-styles-wrapper [disabled] {
   cursor: default;
 }
-
-/* # =================================================================
-   # Specify media element style
-   # ================================================================= */
-img {
+.editor-styles-wrapper img {
   border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
 }
-
-/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
-progress {
+.editor-styles-wrapper progress {
   vertical-align: baseline;
 }
-
-/* # =================================================================
-   # Accessibility
-   # ================================================================= */
-/* Specify the progress cursor of updating elements */
-[aria-busy=true] {
+.editor-styles-wrapper [aria-busy=true] {
   cursor: progress;
 }
-
-/* Specify the pointer cursor of trigger elements */
-[aria-controls] {
+.editor-styles-wrapper [aria-controls] {
   cursor: pointer;
 }
-
-/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
-[aria-disabled=true] {
+.editor-styles-wrapper [aria-disabled=true] {
   cursor: default;
 }
-
-* {
+.editor-styles-wrapper * {
   font-synthesis: inherit;
 }
-*, *::before, *::after {
+.editor-styles-wrapper *, .editor-styles-wrapper *::before, .editor-styles-wrapper *::after {
   box-sizing: inherit;
 }
-
-address {
+.editor-styles-wrapper address {
   font-size: inherit;
   font-style: inherit;
 }
-
-figure {
+.editor-styles-wrapper figure {
   margin: 0;
 }
-
-.touch {
+.editor-styles-wrapper .touch {
   cursor: pointer;
 }
-
-a,
-area,
-button,
-[role=button],
-input:not([type=range]),
-label,
-select,
-summary,
-textarea {
+.editor-styles-wrapper a,
+.editor-styles-wrapper area,
+.editor-styles-wrapper button,
+.editor-styles-wrapper [role=button],
+.editor-styles-wrapper input:not([type=range]),
+.editor-styles-wrapper label,
+.editor-styles-wrapper select,
+.editor-styles-wrapper summary,
+.editor-styles-wrapper textarea {
   touch-action: manipulation;
 }
 
@@ -397,201 +349,27 @@ textarea {
   border: 0 !important;
 }
 
-h1, h2, h3, h4, h5 {
-  font-size: clamp(2.5rem, 3vw, 5rem);
+:root {
+  font-size: 10px;
 }
 
-p, a, ol, hr, blockquote {
-  margin-bottom: clamp(3rem, 2.5vw, 4rem);
-}
-
-a:not(.wp-element-button) {
-  outline: none;
-  transition: all 100ms ease-out;
-  text-decoration: underline;
-  color: #ff364a;
-}
-a:not(.wp-element-button):visited {
-  color: #FF6978;
-}
-a:not(.wp-element-button):focus {
-  background-color: #ff364a;
-  color: #fff;
-  text-decoration: none;
-  outline: none;
-}
-a:not(.wp-element-button):hover {
-  color: #ff364a;
-  text-decoration: none;
-}
-a:not(.wp-element-button):active {
-  background-color: #ff838f;
-  color: #000;
-  text-decoration: none;
-  outline: none;
-}
-@media (prefers-color-scheme: dark) {
-  a:not(.wp-element-button) {
-    outline: none;
-    transition: all 100ms ease-out;
-    text-decoration: underline;
-    color: #FF6978;
-  }
-  a:not(.wp-element-button):visited {
-    color: #ff838f;
-  }
-  a:not(.wp-element-button):focus {
-    background-color: #ff838f;
-    color: #000;
-    text-decoration: none;
-    outline: none;
-  }
-  a:not(.wp-element-button):hover {
-    color: #ff364a;
-    text-decoration: none;
-  }
-  a:not(.wp-element-button):active {
-    background-color: #ff838f;
-    color: #000;
-    text-decoration: none;
-    outline: none;
-  }
-}
-
-p a, li a {
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 600;
-}
-
-p {
-  color: inherit;
-  line-height: 1.8;
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  line-height: 1.6;
-  font-size: clamp(1.6rem, 2vw, 2.1rem);
-  margin-bottom: clamp(3rem, 2.5vw, 4rem);
-}
-
-li {
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  line-height: 1.6;
-  font-size: clamp(1.6rem, 2vw, 2.1rem);
-}
-
-b, strong {
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 600;
-}
-
-ul {
-  padding: 0;
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  line-height: 1.6;
-  font-size: clamp(1.6rem, 2vw, 2.1rem);
-  list-style-position: inside;
-  margin-bottom: clamp(3rem, 2.5vw, 4rem);
-}
-ul li {
-  position: relative;
-  display: block;
-  padding-left: 1.2em;
-  list-style: none;
-  line-height: 1.4;
-}
-ul li::before {
-  position: absolute;
-  top: 0.5em;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  background-color: #FF6978;
-  content: "";
-}
-
-ol {
-  padding: 0;
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  line-height: 1.6;
-  font-size: clamp(1.6rem, 2vw, 2.1rem);
-  list-style: none;
-  counter-reset: li;
-  list-style-position: inside;
-  margin-bottom: clamp(3rem, 2.5vw, 4rem);
-}
-ol li {
-  counter-increment: item;
-  position: relative;
-  display: block;
-  padding-left: 1.5em;
-  list-style: none;
-  line-height: 1.4;
-}
-ol li::before {
-  position: absolute;
-  left: 0;
-  content: counter(item) ". ";
-}
-
-hr {
-  height: 1px;
-  border: 0;
-  background-color: #707070;
-}
-@media (prefers-color-scheme: dark) {
-  hr {
-    background-color: #707070;
-  }
-}
-
-ul li {
-  list-style: none;
-}
-
-::selection {
-  background-color: #FF6978;
-  color: #000;
-}
-@media (prefers-color-scheme: dark) {
-  ::selection {
-    background-color: #ff838f;
-    color: #000;
-  }
-}
-
-svg, svg path {
-  fill: currentcolor;
-}
-
-html {
+.editor-styles-wrapper {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  padding-bottom: 0 !important;
   box-sizing: border-box;
-  font-size: 10px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-synthesis: none;
   text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-  overflow-y: unset;
-}
-@media screen and (max-width: 40.063em) {
-  html {
-    overflow-x: hidden;
-  }
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
+.wp-block-post-content {
   margin: 0;
+  margin-top: clamp(4rem, 4vw, 6rem);
+  padding-top: clamp(4rem, 4vw, 6rem);
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -601,90 +379,78 @@ body {
   color: #333;
 }
 @media (prefers-color-scheme: dark) {
-  body {
+  .wp-block-post-content {
     background-color: #000;
     color: #fff;
   }
 }
 
-h1, h2, h3, h4, h5 {
+.editor-styles-wrapper {
+  /* stylelint-disable-next-line */
+}
+.editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3, .editor-styles-wrapper h4, .editor-styles-wrapper h5 {
   font-size: clamp(2.5rem, 3vw, 5rem);
 }
-
-p, a, ol, hr, blockquote {
+.editor-styles-wrapper p, .editor-styles-wrapper a, .editor-styles-wrapper ol, .editor-styles-wrapper hr, .editor-styles-wrapper blockquote {
   margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-
-a:not(.wp-element-button) {
+.editor-styles-wrapper a:not(.wp-element-button) {
   outline: none;
   transition: all 100ms ease-out;
   text-decoration: underline;
   color: #ff364a;
 }
-a:not(.wp-element-button):visited {
+.editor-styles-wrapper a:not(.wp-element-button):visited {
   color: #FF6978;
 }
-a:not(.wp-element-button):focus {
+.editor-styles-wrapper a:not(.wp-element-button):focus {
   background-color: #ff364a;
   color: #fff;
   text-decoration: none;
   outline: none;
 }
-a:not(.wp-element-button):hover {
+.editor-styles-wrapper a:not(.wp-element-button):hover {
   color: #ff364a;
   text-decoration: none;
 }
-a:not(.wp-element-button):active {
+.editor-styles-wrapper a:not(.wp-element-button):active {
   background-color: #ff838f;
   color: #000;
   text-decoration: none;
   outline: none;
 }
 @media (prefers-color-scheme: dark) {
-  a:not(.wp-element-button) {
+  .editor-styles-wrapper a:not(.wp-element-button) {
     outline: none;
     transition: all 100ms ease-out;
     text-decoration: underline;
     color: #FF6978;
   }
-  a:not(.wp-element-button):visited {
+  .editor-styles-wrapper a:not(.wp-element-button):visited {
     color: #ff838f;
   }
-  a:not(.wp-element-button):focus {
+  .editor-styles-wrapper a:not(.wp-element-button):focus {
     background-color: #ff838f;
     color: #000;
     text-decoration: none;
     outline: none;
   }
-  a:not(.wp-element-button):hover {
+  .editor-styles-wrapper a:not(.wp-element-button):hover {
     color: #ff364a;
     text-decoration: none;
   }
-  a:not(.wp-element-button):active {
+  .editor-styles-wrapper a:not(.wp-element-button):active {
     background-color: #ff838f;
     color: #000;
     text-decoration: none;
     outline: none;
   }
 }
-
-p, li {
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 400;
-  line-height: 1.6;
-  font-size: clamp(1.6rem, 2vw, 2.1rem);
-}
-p a, li a {
+.editor-styles-wrapper p a, .editor-styles-wrapper li a {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
 }
-
-b, strong {
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 600;
-}
-
-p {
+.editor-styles-wrapper p {
   color: inherit;
   line-height: 1.8;
   font-family: "IBM Plex Sans", serif;
@@ -693,8 +459,17 @@ p {
   font-size: clamp(1.6rem, 2vw, 2.1rem);
   margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-
-ul {
+.editor-styles-wrapper li {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: clamp(1.6rem, 2vw, 2.1rem);
+}
+.editor-styles-wrapper b, .editor-styles-wrapper strong {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+}
+.editor-styles-wrapper ul {
   padding: 0;
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
@@ -703,14 +478,14 @@ ul {
   list-style-position: inside;
   margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-ul li {
+.editor-styles-wrapper ul li {
   position: relative;
   display: block;
   padding-left: 1.2em;
   list-style: none;
   line-height: 1.4;
 }
-ul li::before {
+.editor-styles-wrapper ul li::before {
   position: absolute;
   top: 0.5em;
   left: 0;
@@ -719,8 +494,7 @@ ul li::before {
   background-color: #FF6978;
   content: "";
 }
-
-ol {
+.editor-styles-wrapper ol {
   padding: 0;
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
@@ -731,7 +505,7 @@ ol {
   list-style-position: inside;
   margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-ol li {
+.editor-styles-wrapper ol li {
   counter-increment: item;
   position: relative;
   display: block;
@@ -739,124 +513,82 @@ ol li {
   list-style: none;
   line-height: 1.4;
 }
-ol li::before {
+.editor-styles-wrapper ol li::before {
   position: absolute;
   left: 0;
   content: counter(item) ". ";
 }
-
-hr {
+.editor-styles-wrapper hr {
   height: 1px;
   border: 0;
   background-color: #707070;
 }
 @media (prefers-color-scheme: dark) {
-  hr {
+  .editor-styles-wrapper hr {
     background-color: #707070;
   }
 }
-
-ul li {
+.editor-styles-wrapper ul li {
   list-style: none;
 }
-
-::selection {
+.editor-styles-wrapper ::selection {
   background-color: #FF6978;
   color: #000;
 }
 @media (prefers-color-scheme: dark) {
-  ::selection {
+  .editor-styles-wrapper ::selection {
     background-color: #ff838f;
     color: #000;
   }
 }
-
-svg, svg path {
+.editor-styles-wrapper svg, .editor-styles-wrapper svg path {
   fill: currentcolor;
 }
-
-* {
-  font-synthesis: inherit;
-}
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-address {
-  font-size: inherit;
-  font-style: inherit;
-}
-
-figure {
-  margin: 0;
-}
-
-.touch {
-  cursor: pointer;
-}
-
-a,
-area,
-button,
-[role=button],
-input:not([type=range]),
-label,
-select,
-summary,
-textarea {
-  touch-action: manipulation;
-}
-
-.o-header {
+.editor-styles-wrapper .o-header {
   padding-top: clamp(4rem, 4vw, 6rem);
 }
-.o-header__container {
+.editor-styles-wrapper .o-header__container {
   display: flex;
   position: relative;
 }
-
-.o-main {
+.editor-styles-wrapper .o-main {
   padding-bottom: clamp(4rem, 4vw, 6rem);
 }
-
-.o-content > *, .wp-block-post-content > * {
+.editor-styles-wrapper .o-content > *, .editor-styles-wrapper .wp-block-post-content > * {
   margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-.o-content h2, .wp-block-post-content h2 {
+.editor-styles-wrapper .o-content h2, .editor-styles-wrapper .wp-block-post-content h2 {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
   font-size: clamp(2.2rem, 2.5vw, 3.5rem);
   line-height: 1.2;
 }
-.o-content h3, .o-content h4, .o-content h5, .wp-block-post-content h3, .wp-block-post-content h4, .wp-block-post-content h5 {
+.editor-styles-wrapper .o-content h3, .editor-styles-wrapper .o-content h4, .editor-styles-wrapper .o-content h5, .editor-styles-wrapper .wp-block-post-content h3, .editor-styles-wrapper .wp-block-post-content h4, .editor-styles-wrapper .wp-block-post-content h5 {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
   font-size: clamp(2rem, 2.5vw, 3.2rem);
   line-height: 1.2;
 }
-.o-content p, .wp-block-post-content p {
+.editor-styles-wrapper .o-content p, .editor-styles-wrapper .wp-block-post-content p {
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
   line-height: 1.6;
   font-size: clamp(1.6rem, 2vw, 2.1rem);
 }
-
-.o-index__container {
+.editor-styles-wrapper .o-index__container {
   padding-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-.o-index__item {
+.editor-styles-wrapper .o-index__item {
   padding-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-.o-index__item p {
+.editor-styles-wrapper .o-index__item p {
   margin-bottom: 0;
 }
-
-.o-footer {
+.editor-styles-wrapper .o-footer {
   padding-top: clamp(3rem, 2.5vw, 4rem);
   padding-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-
-.o-row {
+.editor-styles-wrapper .o-row {
   width: 100%;
   margin-top: clamp(3rem, 2.5vw, 4rem);
   margin-bottom: clamp(3rem, 2.5vw, 4rem);
@@ -864,35 +596,33 @@ textarea {
   padding-right: 3rem;
 }
 @media screen and (min-width: 900px) {
-  .o-row {
+  .editor-styles-wrapper .o-row {
     padding-left: 3rem;
     padding-right: 3rem;
   }
 }
-
-.o-row-container {
+.editor-styles-wrapper .o-row-container {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
-.o-row-container--wide {
+.editor-styles-wrapper .o-row-container--wide {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1100px;
 }
-
-.o-single__head {
+.editor-styles-wrapper .o-single__head {
   margin-bottom: clamp(4rem, 4vw, 6rem);
 }
-.o-single__title {
+.editor-styles-wrapper .o-single__title {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
   font-size: clamp(3rem, 4.5vw, 8rem);
   line-height: 1.2;
   margin-bottom: clamp(3rem, 2.5vw, 4rem);
 }
-.o-single__metadata {
+.editor-styles-wrapper .o-single__metadata {
   display: flex;
   gap: 0.5em;
   flex-direction: column;
@@ -903,36 +633,36 @@ textarea {
   letter-spacing: 0.02em;
 }
 @media screen and (min-width: 22.438em) {
-  .o-single__metadata {
+  .editor-styles-wrapper .o-single__metadata {
     flex-direction: row;
     align-items: unset;
     flex-wrap: wrap;
   }
 }
-.o-single__metadata__divider {
+.editor-styles-wrapper .o-single__metadata__divider {
   display: none;
 }
 @media screen and (min-width: 22.438em) {
-  .o-single__metadata__divider {
+  .editor-styles-wrapper .o-single__metadata__divider {
     display: block;
   }
 }
-.o-single__cta {
+.editor-styles-wrapper .o-single__cta {
   gap: 3rem;
   display: flex;
   align-items: center;
 }
-.o-single__cta__button {
+.editor-styles-wrapper .o-single__cta__button {
   flex-shrink: 0;
 }
-.o-single__cta::after {
+.editor-styles-wrapper .o-single__cta::after {
   display: block;
   content: "";
   width: 100%;
   height: 4px;
   background-color: #FF6978;
 }
-.o-single__featured-image {
+.editor-styles-wrapper .o-single__featured-image {
   width: 100%;
   aspect-ratio: 16/9;
   background-repeat: no-repeat;
@@ -943,23 +673,22 @@ textarea {
   position: relative;
 }
 @media screen and (min-width: 40.063em) {
-  .o-single__featured-image {
+  .editor-styles-wrapper .o-single__featured-image {
     aspect-ratio: 10/2;
   }
 }
-
-.o-logo-lockup {
+.editor-styles-wrapper .o-logo-lockup {
   display: flex;
   align-items: center;
   position: relative;
   color: #00b682;
 }
 @media (prefers-color-scheme: dark) {
-  .o-logo-lockup {
+  .editor-styles-wrapper .o-logo-lockup {
     color: #fff;
   }
 }
-.o-logo-lockup__logo {
+.editor-styles-wrapper .o-logo-lockup__logo {
   transition: 0.1s;
   position: relative;
   display: block;
@@ -969,11 +698,11 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.o-logo-lockup__logo img, .o-logo-lockup__logo svg {
+.editor-styles-wrapper .o-logo-lockup__logo img, .editor-styles-wrapper .o-logo-lockup__logo svg {
   max-height: 40px;
   width: auto;
 }
-.o-logo-lockup__site-name {
+.editor-styles-wrapper .o-logo-lockup__site-name {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
   font-size: 2.4rem;
@@ -981,7 +710,7 @@ textarea {
   padding-left: 0.5em;
   display: block;
 }
-.o-logo-lockup a {
+.editor-styles-wrapper .o-logo-lockup a {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -990,73 +719,72 @@ textarea {
   z-index: 1;
   display: block;
 }
-.o-logo-lockup a:focus {
+.editor-styles-wrapper .o-logo-lockup a:focus {
   background-color: unset;
   outline: 3px solid #FF6978;
 }
 @media (prefers-color-scheme: dark) {
-  .o-logo-lockup a:focus {
+  .editor-styles-wrapper .o-logo-lockup a:focus {
     outline-color: #ff838f;
   }
 }
-
-.c-index-item__title {
+.editor-styles-wrapper .c-index-item__title {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
   font-size: clamp(2.5rem, 3vw, 5rem);
   line-height: 1.2;
 }
-.c-index-item__title a {
+.editor-styles-wrapper .c-index-item__title a {
   outline: none;
   transition: all 100ms ease-out;
   text-decoration: underline;
   color: #000;
 }
-.c-index-item__title a:visited {
+.editor-styles-wrapper .c-index-item__title a:visited {
   color: #333;
 }
-.c-index-item__title a:focus {
+.editor-styles-wrapper .c-index-item__title a:focus {
   background-color: #FF6978;
   color: #000;
   text-decoration: none;
   outline: none;
 }
-.c-index-item__title a:hover {
+.editor-styles-wrapper .c-index-item__title a:hover {
   text-decoration: none;
 }
-.c-index-item__title a:active {
+.editor-styles-wrapper .c-index-item__title a:active {
   background-color: #FF6978;
   color: #000;
   text-decoration: none;
   outline: none;
 }
 @media (prefers-color-scheme: dark) {
-  .c-index-item__title a {
+  .editor-styles-wrapper .c-index-item__title a {
     outline: none;
     transition: all 100ms ease-out;
     text-decoration: underline;
     color: #fff;
   }
-  .c-index-item__title a:visited {
+  .editor-styles-wrapper .c-index-item__title a:visited {
     color: #f7f7f7;
   }
-  .c-index-item__title a:focus {
+  .editor-styles-wrapper .c-index-item__title a:focus {
     background-color: #FF6978;
     color: #000;
     text-decoration: none;
     outline: none;
   }
-  .c-index-item__title a:hover {
+  .editor-styles-wrapper .c-index-item__title a:hover {
     text-decoration: none;
   }
-  .c-index-item__title a:active {
+  .editor-styles-wrapper .c-index-item__title a:active {
     background-color: #FF6978;
     color: #000;
     text-decoration: none;
     outline: none;
   }
 }
-.c-index-item__metadata {
+.editor-styles-wrapper .c-index-item__metadata {
   display: flex;
   gap: 0.5em;
   flex-direction: column;
@@ -1069,39 +797,38 @@ textarea {
   padding-bottom: clamp(1rem, 1.5vw, 2rem);
 }
 @media screen and (min-width: 22.438em) {
-  .c-index-item__metadata {
+  .editor-styles-wrapper .c-index-item__metadata {
     flex-direction: row;
     align-items: unset;
     flex-wrap: wrap;
   }
 }
-.c-index-item__metadata__divider {
+.editor-styles-wrapper .c-index-item__metadata__divider {
   display: none;
 }
 @media screen and (min-width: 22.438em) {
-  .c-index-item__metadata__divider {
+  .editor-styles-wrapper .c-index-item__metadata__divider {
     display: block;
   }
 }
-.c-index-item__excerpt {
+.editor-styles-wrapper .c-index-item__excerpt {
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
 }
-
-.wp-block-quote, .wp-block-quote--long {
+.editor-styles-wrapper .wp-block-quote, .editor-styles-wrapper .wp-block-quote--long {
   margin-top: clamp(4rem, 4vw, 6rem);
   margin-bottom: clamp(4rem, 4vw, 6rem);
   padding-left: calc(29px + 1.2rem);
   position: relative;
 }
 @media screen and (min-width: calc(900px + 3rem + 60px)) {
-  .wp-block-quote, .wp-block-quote--long {
+  .editor-styles-wrapper .wp-block-quote, .editor-styles-wrapper .wp-block-quote--long {
     left: calc(-29px - 1.2rem);
   }
 }
-.wp-block-quote::before, .wp-block-quote--long::before {
+.editor-styles-wrapper .wp-block-quote::before, .editor-styles-wrapper .wp-block-quote--long::before {
   position: absolute;
   left: 0;
   top: -1.2rem;
@@ -1113,7 +840,7 @@ textarea {
   color: #FF6978;
   background-size: cover;
 }
-.wp-block-quote p, .wp-block-quote--long p {
+.editor-styles-wrapper .wp-block-quote p, .editor-styles-wrapper .wp-block-quote--long p {
   position: relative;
   display: block;
   margin-bottom: 0.5em;
@@ -1123,23 +850,23 @@ textarea {
   color: #ff364a;
 }
 @media (prefers-color-scheme: dark) {
-  .wp-block-quote p, .wp-block-quote--long p {
+  .editor-styles-wrapper .wp-block-quote p, .editor-styles-wrapper .wp-block-quote--long p {
     color: #ff838f;
   }
 }
-.wp-block-quote p:first-of-type, .wp-block-quote--long p:first-of-type {
+.editor-styles-wrapper .wp-block-quote p:first-of-type, .editor-styles-wrapper .wp-block-quote--long p:first-of-type {
   border-top: 1px solid #ff364a;
   padding-top: clamp(1rem, 1.5vw, 2rem);
 }
 @media (prefers-color-scheme: dark) {
-  .wp-block-quote p:first-of-type, .wp-block-quote--long p:first-of-type {
+  .editor-styles-wrapper .wp-block-quote p:first-of-type, .editor-styles-wrapper .wp-block-quote--long p:first-of-type {
     border-top: 1px solid #ff838f;
   }
 }
-.wp-block-quote p:last-of-type, .wp-block-quote--long p:last-of-type {
+.editor-styles-wrapper .wp-block-quote p:last-of-type, .editor-styles-wrapper .wp-block-quote--long p:last-of-type {
   margin-bottom: 0;
 }
-.wp-block-quote cite, .wp-block-quote--long cite {
+.editor-styles-wrapper .wp-block-quote cite, .editor-styles-wrapper .wp-block-quote--long cite {
   font-family: "Cormorant", serif;
   font-weight: 700;
   font-style: italic;
@@ -1148,93 +875,13 @@ textarea {
   padding-top: 0.6em;
   line-height: 1;
 }
-.wp-block-quote--long p {
+.editor-styles-wrapper .wp-block-quote--long p {
   line-height: 1.8;
   font-size: 2.2rem;
 }
-.wp-block-quote--long cite {
+.editor-styles-wrapper .wp-block-quote--long cite {
   font-size: 2.4rem;
 }
-
-.wp-block-button__link {
-  font-family: "IBM Plex Sans", serif;
-  font-weight: 600;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  position: relative;
-  display: block;
-  width: auto;
-  padding: 1em 1.2em;
-  border-radius: 2px !important;
-  text-align: center;
-  cursor: pointer;
-  transition-duration: 0.2s;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.8, 0, 0.3, 1);
-  color: #000;
-  background-color: #FF6978;
-  margin-bottom: 0;
-}
-.wp-block-button__link:hover {
-  background-color: #ff5061;
-  color: #000;
-  outline: none;
-}
-.wp-block-button__link:active {
-  background-color: #ff5061 !important;
-  color: #fff;
-  outline: 3px solid #FF6978;
-}
-@media (prefers-color-scheme: dark) {
-  .wp-block-button__link:active {
-    outline-color: #ff838f;
-  }
-}
-.wp-block-button__link:focus {
-  background-color: #ff5061 !important;
-  color: #fff;
-  outline: 3px solid #FF6978;
-}
-@media (prefers-color-scheme: dark) {
-  .wp-block-button__link:focus {
-    outline-color: #ff838f;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .wp-block-button__link {
-    color: #000;
-    background-color: #FF6978;
-  }
-  .wp-block-button__link:hover {
-    background-color: #ff5061;
-    color: #000;
-    outline: none;
-  }
-  .wp-block-button__link:active {
-    background-color: #ff5061 !important;
-    color: #000;
-    outline: 3px solid #FF6978;
-  }
-}
-@media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
-  .wp-block-button__link:active {
-    outline-color: #ff838f;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .wp-block-button__link:focus {
-    background-color: #ff5061 !important;
-    color: #000;
-    outline: 3px solid #FF6978;
-  }
-}
-@media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
-  .wp-block-button__link:focus {
-    outline-color: #ff838f;
-  }
-}
-
 .editor-styles-wrapper .wp-block-button__link {
   font-family: "IBM Plex Sans", serif;
   font-weight: 600;
@@ -1253,6 +900,7 @@ textarea {
   transition-timing-function: cubic-bezier(0.8, 0, 0.3, 1);
   color: #000;
   background-color: #FF6978;
+  margin-bottom: 0;
 }
 .editor-styles-wrapper .wp-block-button__link:hover {
   background-color: #ff5061;
@@ -1312,21 +960,99 @@ textarea {
     outline-color: #ff838f;
   }
 }
-
-/* stylelint-disable-next-line */
+.editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  position: relative;
+  display: block;
+  width: auto;
+  padding: 1em 1.2em;
+  border-radius: 2px !important;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.8, 0, 0.3, 1);
+  color: #000;
+  background-color: #FF6978;
+}
+.editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:hover {
+  background-color: #ff5061;
+  color: #000;
+  outline: none;
+}
+.editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:active {
+  background-color: #ff5061 !important;
+  color: #fff;
+  outline: 3px solid #FF6978;
+}
+@media (prefers-color-scheme: dark) {
+  .editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:active {
+    outline-color: #ff838f;
+  }
+}
+.editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:focus {
+  background-color: #ff5061 !important;
+  color: #fff;
+  outline: 3px solid #FF6978;
+}
+@media (prefers-color-scheme: dark) {
+  .editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:focus {
+    outline-color: #ff838f;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link {
+    color: #000;
+    background-color: #FF6978;
+  }
+  .editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:hover {
+    background-color: #ff5061;
+    color: #000;
+    outline: none;
+  }
+  .editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:active {
+    background-color: #ff5061 !important;
+    color: #000;
+    outline: 3px solid #FF6978;
+  }
+}
+@media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
+  .editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:active {
+    outline-color: #ff838f;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:focus {
+    background-color: #ff5061 !important;
+    color: #000;
+    outline: 3px solid #FF6978;
+  }
+}
+@media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
+  .editor-styles-wrapper .editor-styles-wrapper .wp-block-button__link:focus {
+    outline-color: #ff838f;
+  }
+}
 @media screen and (max-width: 900px) {
-  #wpadminbar {
+  .editor-styles-wrapper #wpadminbar {
     display: none;
   }
 }
-
-.wp-block-button {
+.editor-styles-wrapper .wp-block-button {
   padding: 0;
   display: block;
 }
-
-.wp-block-buttons {
+.editor-styles-wrapper .wp-block-buttons {
   padding: 0 !important;
 }
+@media (prefers-color-scheme: dark) {
+  .editor-styles-wrapper .block-editor-block-list__layout {
+    background-color: #000 !important;
+  }
+}
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=editor-theme-styles.css.map */

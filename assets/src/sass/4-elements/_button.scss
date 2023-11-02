@@ -52,7 +52,15 @@
   }
 }
 
-.wp-block-button a{
-  @include button;
-  margin-bottom: 0;
+.wp-block-button{
+  &__link{
+    @include button;
+    margin-bottom: 0;
+  }
+}
+
+.editor-styles-wrapper{
+  .wp-block-button__link{
+      @include button;
+  }
 }

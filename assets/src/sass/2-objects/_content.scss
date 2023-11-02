@@ -1,0 +1,17 @@
+// Post and page content
+// ------------------------------------------------------------
+
+.o-content, .wp-block-post-content{
+  >*{
+    margin-bottom:$gap;
+  }
+  h2{
+    @include text-heading;
+  }
+  h3, h4, h5{
+    @include text-heading--lower;
+  }
+  p{
+    @include text-body;
+  }
+}
