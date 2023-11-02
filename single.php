@@ -30,7 +30,9 @@ if ( have_posts() ) :
                                 <?php the_excerpt(); ?>
                             </div>
                         <?php endif; ?>
-                        <?php the_content() ?>
+                        <div class="o-content">
+                            <?php the_content() ?>
+                        </div>
                     </div>
                 </div>
             </div>
