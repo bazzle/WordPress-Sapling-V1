@@ -13,6 +13,6 @@
         <?php echo get_bloginfo( 'name' ); ?>
     </span>
     <a class="o-logo-lockup__link" href="<?php echo home_url(); ?>">
-        <span class="visually-hidden">Back to homepage</span>
+        <span class="sr-only">Back to homepage</span>
     </a>
 </div>
