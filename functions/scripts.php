@@ -24,14 +24,13 @@ function sapling_enqueue_editor_scripts(){
 add_action('enqueue_block_editor_assets', 'sapling_enqueue_editor_scripts');
 
 /**
- * @desc add defer to scripts.min.js
+ * @desc add defer to theme script
  */
 
-function add_defer_attribute( $tag, $handle ) {
-	if ( 'main-js' !== $handle ) {
-		return $tag;
-	}
-	return str_replace( ' src', ' defer src', $tag );
+ function add_async_attribute($tag, $handle) {
+    if ('sapling_js_main' === $handle) {
+        return str_replace(' src', ' async="async" src', $tag);
+    }
+    return $tag;
 }
-
-add_filter( 'script_loader_tag', 'add_defer_attribute', 10, 2 );
+add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
