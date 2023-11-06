@@ -1,3 +1,5 @@
+
+
 // Headings
 // ------------------------------------------------------------
 
@@ -24,24 +26,19 @@ a:not(.wp-element-button){
 // ------------------------------------------------------------
 
 p, li{
-  a{
-    @include font-sans-bold;
-  }
-}
-
-p{
-  @include paragraphdefaults;
-}
-
-li{
   @include text-body;
+  a{
+      @include font-sans-bold;
+  }
 }
 
 b, strong{
   @include font-sans-bold;
 }
 
-
+p{
+  @include paragraphdefaults;
+}
 
 ul{
   @include ullistdefaults;
@@ -80,3 +77,39 @@ svg, svg path{
   fill:currentcolor;
 }
 
+// Some further resets
+// ------------------------------------------------------------
+
+*{
+  &,
+  &::before,
+  &::after{
+    box-sizing: inherit;
+  }
+  font-synthesis: inherit;
+}
+
+address{
+  font-size: inherit;
+  font-style: inherit;
+}
+
+figure{
+  margin: 0;
+}
+
+.touch{
+  cursor: pointer;
+}
+
+a,
+area,
+button,
+[role='button'],
+input:not([type='range']),
+label,
+select,
+summary,
+textarea{
+  touch-action: manipulation;
+}
